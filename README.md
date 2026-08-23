@@ -99,9 +99,24 @@ python3 _build/pages.py
 python3 _build/toolpages.py
 python3 _build/guide.py
 python3 _build/split.py      # <- genera / y /en/, sitemap.xml y robots.txt
+python3 _build/make_pdf.py   # <- genera los dos PDF de la guía en assets/
 ```
 
-Necesita Python 3 con `beautifulsoup4` instalado (`pip3 install beautifulsoup4`).
+Necesita Python 3 con `beautifulsoup4` y `weasyprint` (`pip3 install beautifulsoup4 weasyprint`).
+
+### La guía en PDF
+`_build/make_pdf.py` toma el contenido de `guia.html` y `en/guia.html` y arma los libros:
+
+- `assets/guia-marketing-local-mapa-marketing.pdf` (25 páginas, español)
+- `assets/local-marketing-guide-mapa-marketing.pdf` (25 páginas, inglés)
+
+Llevan portada, índice con números de página, numeración y una página de cierre con el
+WhatsApp. Si editas un capítulo, vuelve a correr `guide.py`, `split.py` y `make_pdf.py` en
+ese orden. El enlace para mandar por WhatsApp es:
+
+```
+https://TU-DOMINIO.com/assets/guia-marketing-local-mapa-marketing.pdf
+```
 
 ### Al conectar tu dominio
 Abre `_build/split.py` y cambia la constante `SITE` al inicio del archivo. Vuelve a correr

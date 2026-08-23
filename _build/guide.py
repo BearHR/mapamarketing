@@ -809,6 +809,8 @@ body = f'''<div class="progress" aria-hidden="true"></div>
       {wa("Hola MAPA, leí su guía y prefiero que ustedes lo hagan. Mi negocio es ___ en ___.",
           "Hi MAPA, I read your guide and I'd rather you did it. My business is ___ in ___.",
           "Que lo hagan ustedes", "Have you do it")}
+      <a class="btn btn--ghost" href="assets/guia-marketing-local-mapa-marketing.pdf" download data-l="es">Descargar en PDF</a>
+      <a class="btn btn--ghost" href="assets/local-marketing-guide-mapa-marketing.pdf" download data-l="en">Download the PDF</a>
       <a class="btn btn--ghost" href="herramientas.html"><span data-l="es">Ver las herramientas</span><span data-l="en">See the tools</span></a>
     </div>
   </div>
