@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Reemplaza https://TU-DOMINIO.com por tu dominio real antes de enviarlo a Google Search Console -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://TU-DOMINIO.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://TU-DOMINIO.com/servicios.html</loc><priority>0.9</priority></url>
+  <url><loc>https://TU-DOMINIO.com/proceso.html</loc><priority>0.8</priority></url>
+  <url><loc>https://TU-DOMINIO.com/guia.html</loc><priority>0.9</priority></url>
+  <url><loc>https://TU-DOMINIO.com/herramientas.html</loc><priority>0.8</priority></url>
+  <url><loc>https://TU-DOMINIO.com/diagnostico.html</loc><priority>0.7</priority></url>
+  <url><loc>https://TU-DOMINIO.com/calculadora.html</loc><priority>0.7</priority></url>
+  <url><loc>https://TU-DOMINIO.com/publicaciones.html</loc><priority>0.7</priority></url>
+  <url><loc>https://TU-DOMINIO.com/resenas.html</loc><priority>0.7</priority></url>
+  <url><loc>https://TU-DOMINIO.com/citaciones.html</loc><priority>0.7</priority></url>
+</urlset>
