@@ -41,8 +41,8 @@ def block(n, t_es, t_en, p_es, p_en, why_es, why_en):
 
 servicios = phero(
     "Servicios", "Services",
-    "Todo lo que hacemos, sin letra chica.",
-    "Everything we do, no fine print.",
+    "Servicios: sitio web y marketing local mensual",
+    "Services: website and monthly local marketing",
     "Un programa en dos fases. La primera construye la base, la segunda la hace rendir. El sitio web va incluido cuando arrancas con seis meses de trabajo mensual, y aquí está exactamente qué pasa en cada fase.",
     "One program in two phases. The first builds the foundation, the second makes it pay off. The website is included when you start with six months of ongoing work, and here's exactly what happens in each phase."
 ) + '''
@@ -66,7 +66,7 @@ servicios = phero(
   "02", "Textos escritos para tu cliente, no para ti", "Copy written for your customer, not for you",
   "Cada página abre con el problema del cliente, no con la historia de la empresa. Qué haces, en cuánto llegas, qué pasa después de que escribes, cuánto cuesta más o menos.",
   "Every page opens with the customer's problem, not the company's history. What you do, how fast you arrive, what happens after they message, roughly what it costs.",
-  "La persona con agua en el piso no quiere leer «fundada en 2011 con pasión por la excelencia». Quiere saber si llegas hoy.",
+  "A la persona que tiene agua en el piso no le importa leer «fundada en 2011 con pasión por la excelencia». Quiere saber si puedes llegar hoy.",
   "The person with water on the floor doesn't want “founded in 2011 with a passion for excellence.” They want to know if you can come today.") + block(
   "03", "Velocidad en celular", "Mobile speed",
   "Imágenes comprimidas, código mínimo, nada de plantillas infladas con veinte funciones que no usas. Medimos en condiciones reales, con datos móviles, no en una computadora con fibra óptica.",
@@ -76,12 +76,12 @@ servicios = phero(
   "04", "Diseño que empuja al contacto", "Design that pushes contact",
   "Botón de llamada y de WhatsApp fijos en móvil, visibles sin bajar la pantalla. Formulario corto, no un interrogatorio. Prueba visual: fotos de trabajos reales, tu camioneta, tu equipo.",
   "Call and WhatsApp buttons pinned on mobile, visible without scrolling. A short form, not an interrogation. Visual proof: photos of real jobs, your truck, your crew.",
-  "Un sitio bonito que esconde el teléfono es un folleto caro. La conversión se diseña, no se espera.",
-  "A pretty site that hides the phone number is an expensive brochure. Conversion is designed, not hoped for.") + block(
+  "Un sitio bonito que esconde el teléfono es un folleto caro. Que la gente te escriba se diseña a propósito; no pasa solo.",
+  "A pretty site that hides the phone number is an expensive brochure. Getting people to reach out is something you design on purpose; it doesn't just happen.") + block(
   "05", "Estructura técnica para buscadores", "Technical structure for search engines",
   "Títulos y descripciones únicos por página, encabezados en orden, datos estructurados de negocio local, mapa del sitio, imágenes con texto alternativo y URLs limpias.",
   "Unique titles and descriptions per page, headings in order, local business structured data, sitemap, image alt text and clean URLs.",
-  "Es la parte que nadie ve y que decide si Google entiende quién eres, qué vendes y dónde. También es de lo que se alimentan las respuestas de IA.",
+  "Es la parte que nadie ve y de la que depende que Google entienda quién eres, qué vendes y dónde. También es de donde sacan la información las respuestas de IA.",
   "It's the part nobody sees, and it decides whether Google understands who you are, what you sell and where. It's also what AI answers feed on.") + block(
   "06", "Español, inglés o los dos", "Spanish, English or both",
   "Decidimos contigo según a quién le vendes. A veces conviene todo el sitio en inglés con páginas clave en español; a veces al revés. Lo que no hacemos es traducir con un botón automático y dejarlo ahí.",
@@ -207,8 +207,8 @@ page("servicios.html",
 # =====================================================================
 proceso = phero(
     "Proceso", "Process",
-    "Cómo trabajamos, semana por semana.",
-    "How we work, week by week.",
+    "Nuestro proceso de SEO local, semana por semana",
+    "Our local SEO process, week by week",
     "Sin misterio y sin vocabulario de agencia. Esto es lo que pasa desde que nos escribes hasta el mes doce.",
     "No mystery and no agency vocabulary. Here's what happens from the moment you message us through month twelve."
 ) + '''
@@ -219,7 +219,7 @@ proceso = phero(
       <div class="route__stop reveal">
         <div class="route__n">00<small><span data-l="es">HOY</span><span data-l="en">TODAY</span></small></div>
         <div class="route__body">
-          <h3><span data-l="es">Nos escribes</span><span data-l="en">You message us</span></h3>
+          <h2><span data-l="es">Nos escribes</span><span data-l="en">You message us</span></h2>
           <p><span data-l="es">Por WhatsApp, con el nombre de tu negocio y tu ciudad. Nada de formularios de doce campos ni «agenda una llamada de descubrimiento». Contestamos con preguntas concretas: qué servicios vendes, hasta dónde manejas, si ya tienes sitio y perfil de Google.</span>
              <span data-l="en">On WhatsApp, with your business name and your city. No twelve-field forms, no "book a discovery call." We reply with concrete questions: what services you sell, how far you drive, whether you already have a site and a Google profile.</span></p>
         </div>
@@ -227,7 +227,7 @@ proceso = phero(
       <div class="route__stop reveal">
         <div class="route__n">01<small><span data-l="es">DÍA 1–3</span><span data-l="en">DAY 1–3</span></small></div>
         <div class="route__body">
-          <h3><span data-l="es">Diagnóstico</span><span data-l="en">Diagnosis</span></h3>
+          <h2><span data-l="es">Diagnóstico</span><span data-l="en">Diagnosis</span></h2>
           <p><span data-l="es">Revisamos cuatro cosas: tu sitio (velocidad, estructura, textos), tus perfiles en los cuatro mapas, tus citaciones y tus reseñas, y a los tres negocios que hoy salen arriba de ti cuando alguien busca tu servicio en tu ciudad.</span>
              <span data-l="en">We check four things: your site (speed, structure, copy), your profiles on the four maps, your citations and reviews, and the three businesses currently ranking above you when someone searches your service in your city.</span></p>
           <p><span data-l="es">Te lo mandamos por WhatsApp en lenguaje normal: esto tienes, esto te falta, esto tienen ellos que tú no.</span>
@@ -238,7 +238,7 @@ proceso = phero(
       <div class="route__stop reveal">
         <div class="route__n">02<small><span data-l="es">SEMANA 1</span><span data-l="en">WEEK 1</span></small></div>
         <div class="route__body">
-          <h3><span data-l="es">El mapa del sitio</span><span data-l="en">The site map</span></h3>
+          <h2><span data-l="es">El mapa del sitio</span><span data-l="en">The site map</span></h2>
           <p><span data-l="es">Aquí decidimos la estructura: qué páginas se hacen, en qué orden y para qué búsqueda es cada una. Investigamos qué escribe la gente en tu zona, en español y en inglés, porque no siempre buscan lo mismo con las mismas palabras.</span>
              <span data-l="en">Here we lock the structure: which pages get built, in what order, and which search each one targets. We research what people actually type in your area, in both Spanish and English, because they don't always search the same way.</span></p>
           <p><span data-l="es">Sales de esta etapa con una lista clara. Si vendes seis servicios en tres ciudades, no son nueve páginas: son dieciocho páginas de servicio y ciudad, más las de apoyo. Priorizamos las que más dinero te dejan y las construimos en ese orden.</span>
@@ -248,7 +248,7 @@ proceso = phero(
       <div class="route__stop reveal">
         <div class="route__n">03<small><span data-l="es">SEMANAS 2–4</span><span data-l="en">WEEKS 2–4</span></small></div>
         <div class="route__body">
-          <h3><span data-l="es">Construcción y revisión</span><span data-l="en">Build and review</span></h3>
+          <h2><span data-l="es">Construcción y revisión</span><span data-l="en">Build and review</span></h2>
           <p><span data-l="es">Escribimos los textos, armamos el diseño y montamos el sitio. A la mitad te mandamos un enlace de vista previa para que lo veas en tu celular y nos digas qué cambiar. No lanzamos nada que no hayas aprobado.</span>
              <span data-l="en">We write the copy, build the design and assemble the site. Halfway through we send a preview link so you can open it on your phone and tell us what to change. Nothing launches without your approval.</span></p>
           <p><span data-l="es">Antes de salir al aire: prueba de velocidad en celular, prueba de que todos los botones marcan bien, y medición conectada para poder contar llamadas y mensajes desde el día uno.</span>
@@ -258,7 +258,7 @@ proceso = phero(
       <div class="route__stop reveal">
         <div class="route__n">04<small><span data-l="es">SEMANA 4</span><span data-l="en">WEEK 4</span></small></div>
         <div class="route__body">
-          <h3><span data-l="es">Distribución en los cuatro mapas</span><span data-l="en">Distribution across the four maps</span></h3>
+          <h2><span data-l="es">Distribución en los cuatro mapas</span><span data-l="en">Distribution across the four maps</span></h2>
           <p><span data-l="es">Reclamamos o arreglamos Google, Apple Maps, Bing Places y Yelp. Fijamos un solo formato de nombre, dirección y teléfono, y lo replicamos idéntico en los directorios principales. Donde encontramos datos viejos o duplicados, los corregimos o pedimos que los borren.</span>
              <span data-l="en">We claim or fix Google, Apple Maps, Bing Places and Yelp. We lock one format for name, address and phone, and replicate it identically across the main directories. Where we find stale data or duplicates, we correct them or request removal.</span></p>
         </div>
@@ -266,7 +266,7 @@ proceso = phero(
       <div class="route__stop reveal">
         <div class="route__n">05<small><span data-l="es">MES 2 EN ADELANTE</span><span data-l="en">MONTH 2 ONWARD</span></small></div>
         <div class="route__body">
-          <h3><span data-l="es">El ritmo mensual</span><span data-l="en">The monthly rhythm</span></h3>
+          <h2><span data-l="es">El ritmo mensual</span><span data-l="en">The monthly rhythm</span></h2>
           <p><span data-l="es">Aquí es donde se gana el mapa. Cada mes: artículos nuevos, publicaciones en Google, fotos nuevas en los tres mapas que las aceptan, revisión de mapas de calor y ajustes al sitio. Y cuando tu zona lo pide, enlaces locales.</span>
              <span data-l="en">This is where the map gets won. Every month: new articles, Google posts, fresh photos on the three maps that take them, heatmap review and site tweaks. And when your area calls for it, local links.</span></p>
         </div>
@@ -283,16 +283,16 @@ proceso = phero(
     </div>
     <div class="tiles tiles--4">
       <div class="tile reveal"><span class="tile__n"><span data-l="es">SEMANA 1</span><span data-l="en">WEEK 1</span></span>
-        <h3><span data-l="es">Revisión y plan</span><span data-l="en">Review and plan</span></h3>
+        <h2><span data-l="es">Revisión y plan</span><span data-l="en">Review and plan</span></h2>
         <p><span data-l="es">Leemos los mapas de calor y los datos del mes anterior. Definimos los temas del mes y qué se va a ajustar en el sitio.</span><span data-l="en">We read last month's heatmaps and data. We pick the month's topics and what gets adjusted on the site.</span></p></div>
       <div class="tile reveal"><span class="tile__n"><span data-l="es">SEMANA 2</span><span data-l="en">WEEK 2</span></span>
-        <h3><span data-l="es">Contenido</span><span data-l="en">Content</span></h3>
+        <h2><span data-l="es">Contenido</span><span data-l="en">Content</span></h2>
         <p><span data-l="es">Se escriben y publican los artículos del mes. Empiezan a salir las publicaciones de Google con foto.</span><span data-l="en">The month's articles get written and published. Google posts start going out with photos.</span></p></div>
       <div class="tile reveal"><span class="tile__n"><span data-l="es">SEMANA 3</span><span data-l="en">WEEK 3</span></span>
-        <h3><span data-l="es">Mapas y fotos</span><span data-l="en">Maps and photos</span></h3>
+        <h2><span data-l="es">Mapas y fotos</span><span data-l="en">Maps and photos</span></h2>
         <p><span data-l="es">Suben las fotos del mes a Google, Apple Maps y Yelp. Se revisan categorías, horarios y servicios en los cuatro perfiles.</span><span data-l="en">The month's photos go up on Google, Apple Maps and Yelp. Categories, hours and services get reviewed on all four profiles.</span></p></div>
       <div class="tile reveal"><span class="tile__n"><span data-l="es">SEMANA 4</span><span data-l="en">WEEK 4</span></span>
-        <h3><span data-l="es">Autoridad y reporte</span><span data-l="en">Authority and report</span></h3>
+        <h2><span data-l="es">Autoridad y reporte</span><span data-l="en">Authority and report</span></h2>
         <p><span data-l="es">Se cierran los enlaces que estuvieran en marcha, se revisan las citaciones, salen las últimas publicaciones y te llega el reporte.</span><span data-l="en">Any links in progress get closed, citations get checked, the last posts go out, and your report arrives.</span></p></div>
     </div>
   </div>
@@ -348,24 +348,24 @@ page("proceso.html",
 # =====================================================================
 # HERRAMIENTAS (hub)
 # =====================================================================
-def toolcard(href, k_es, k_en, t_es, t_en, d_es, d_en, go_es, go_en, dark=False):
+def toolcard(href, k_es, k_en, t_es, t_en, d_es, d_en, go_es, go_en, dark=False, lvl='h2'):
     style = ' style="background:var(--ink);color:var(--paper);border-color:var(--ink)"' if dark else ''
     h3s = ' style="color:var(--paper)"' if dark else ''
     ps = ' style="color:var(--muted-inv)"' if dark else ''
     gs = ' style="color:var(--wa)"' if dark else ''
     return f'''<a class="toolcard reveal" href="{href}"{style}>
   <span class="toolcard__k"><span data-l="es">{k_es}</span><span data-l="en">{k_en}</span></span>
-  <h3{h3s}><span data-l="es">{t_es}</span><span data-l="en">{t_en}</span></h3>
+  <{lvl}{h3s}><span data-l="es">{t_es}</span><span data-l="en">{t_en}</span></{lvl}>
   <p{ps}><span data-l="es">{d_es}</span><span data-l="en">{d_en}</span></p>
   <span class="toolcard__go"{gs}><span data-l="es">{go_es}</span><span data-l="en">{go_en}</span></span>
-</a>'''
+</a>'''.replace('{lvl}', lvl)
 
 herramientas = phero(
     "Herramientas", "Tools",
-    "Cinco herramientas gratis. Sin correo, sin registro.",
-    "Five free tools. No email, no signup.",
-    "Todo corre en tu navegador y nada se guarda en nuestros servidores. Úsalas aunque nunca nos escribas: preferimos que un dueño de negocio sepa qué le falta a que no lo sepa nadie.",
-    "Everything runs in your browser and nothing is stored on our servers. Use them even if you never message us: we'd rather a business owner know what's missing than nobody know."
+    "Herramientas gratis de SEO local para negocios de servicio",
+    "Free local SEO tools for service businesses",
+    "Cinco herramientas, sin correo y sin registro. Todo corre en tu navegador y nada se guarda en nuestros servidores. Úsalas aunque nunca nos escribas: preferimos que un dueño de negocio sepa qué le falta a que no lo sepa nadie.",
+    "Five tools, no email and no signup. Everything runs in your browser and nothing is stored on our servers. Use them even if you never message us: we'd rather a business owner know what's missing than nobody know."
 ) + '''
 
 <section class="sec">
@@ -400,7 +400,7 @@ herramientas = phero(
       "Marketing local, capítulo por capítulo", "Local marketing, chapter by chapter",
       "Once capítulos sobre sitios web, el Perfil de Google, Apple Maps, Bing, Yelp, citaciones, contenido, enlaces y cómo aparecer en las respuestas de IA.",
       "Eleven chapters on websites, the Google profile, Apple Maps, Bing, Yelp, citations, content, links and how to show up in AI answers.",
-      "Leer la guía", "Read the guide", dark=True) + '''
+      "Leer la guía", "Read the guide", dark=True, lvl="h2") + '''
     </div>
   </div>
 </section>

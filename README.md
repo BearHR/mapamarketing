@@ -43,7 +43,9 @@ grep -rl '527711150327' . | xargs sed -i  's/527711150327/TUNUEVONUMERO/g'      
 ## 3. Estructura
 
 ```
-index.html          Inicio
+index.html          Inicio (español)
+en/                 El sitio completo en inglés (11 páginas)
+_src/               Fuentes bilingües — NO se editan los HTML generados
 servicios.html      Detalle de los dos servicios
 proceso.html        Cómo trabajamos, semana por semana
 guia.html           La guía de 11 capítulos (pilar de contenido)
@@ -75,21 +77,51 @@ Si prefieres editar cada HTML a mano, borra la carpeta `_build/` sin problema.
 
 ## 4. Cómo funciona el bilingüe
 
-Cada texto existe dos veces en el HTML:
+Cada idioma tiene **su propia URL**:
 
-```html
-<span data-l="es">Texto en español</span><span data-l="en">English text</span>
+| Idioma | URL |
+|---|---|
+| Español (canónico) | `/`, `/servicios.html`, `/guia.html`… |
+| Inglés | `/en/`, `/en/servicios.html`, `/en/guia.html`… |
+
+Cada página sale con un solo idioma, un solo `<h1>`, su `canonical` y las tres etiquetas
+`hreflang` (`es`, `en`, `x-default`). El selector ES/EN del menú son enlaces entre las dos
+versiones, no JavaScript.
+
+### Regenerar el sitio
+
+Las fuentes bilingües viven en `_src/` y llevan marcas `data-l="es"` / `data-l="en"`.
+No edites los HTML del raíz ni de `/en/`: se sobrescriben. Edita `_src/index.html` o los
+generadores y vuelve a correr:
+
+```bash
+python3 _build/pages.py
+python3 _build/toolpages.py
+python3 _build/guide.py
+python3 _build/split.py      # <- genera / y /en/, sitemap.xml y robots.txt
 ```
 
-El CSS oculta el que no corresponde según `<html data-lang="es|en">`. El botón ES/EN del nav
-cambia el atributo y lo guarda en el navegador. También funciona con `?lang=en` en la URL.
+Necesita Python 3 con `beautifulsoup4` instalado (`pip3 install beautifulsoup4`).
 
-Para textos que no son visibles (placeholders, aria-labels) se usa `data-ph-es` / `data-ph-en`
-y `data-al-es` / `data-al-en`.
+### Al conectar tu dominio
+Abre `_build/split.py` y cambia la constante `SITE` al inicio del archivo. Vuelve a correr
+`python3 _build/split.py` y se actualizan solos todos los `canonical`, los `hreflang`,
+el `sitemap.xml`, el `robots.txt` y el JSON-LD.
 
-**Nota de SEO:** ambos idiomas están en el mismo HTML, así que ambos son rastreables, pero
-lo ideal a mediano plazo es tener URLs separadas (`/en/servicios.html`) con etiquetas
-`hreflang`. Hazlo cuando el sitio tenga tráfico.
+## 4b. Schema (JSON-LD)
+
+Cada página lleva un bloque `@graph` generado por `_build/split.py`:
+
+- `ProfessionalService` + `Organization` — el negocio, con `areaServed` Estados Unidos,
+  idiomas y el WhatsApp como `contactPoint`.
+- `WebSite` y `WebPage` con `inLanguage`.
+- `BreadcrumbList` en todas las páginas.
+- `FAQPage` en la portada (toma las preguntas del acordeón automáticamente).
+- `Service` × 2 en la portada y en servicios.
+- `Article` en la guía, con la lista de capítulos en `articleSection`.
+- `WebApplication` en cada herramienta e `ItemList` en el hub de herramientas.
+
+Para comprobarlo: pega cualquier URL en <https://search.google.com/test/rich-results>.
 
 ---
 

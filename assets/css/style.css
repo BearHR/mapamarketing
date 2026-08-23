@@ -193,11 +193,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
 .nav__links a[aria-current="page"]{color:var(--ink);box-shadow:inset 0 -2px 0 var(--amber)}
 
 .langtog{display:flex;border:1px solid var(--rule);border-radius:var(--r);overflow:hidden;flex:none;margin-left:.35rem}
-.langtog button{
+.langtog a,.langtog button{
   font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;
   padding:.42rem .55rem;border:0;background:transparent;cursor:pointer;color:var(--muted);
+  text-decoration:none;display:inline-block;line-height:1.4;
 }
-.langtog button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.langtog a[aria-current="true"],.langtog button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.langtog a:hover{color:var(--ink)}
 
 .nav__cta{margin-left:.4rem}
 .burger{display:none;margin-left:auto;background:transparent;border:1px solid var(--rule);border-radius:var(--r);padding:.5rem .65rem;cursor:pointer}
@@ -343,7 +345,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
 }
 .route__n small{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;color:var(--muted);margin-top:.5rem;font-weight:400}
 .dark .route__n small{color:var(--muted-inv)}
-.route__body h3{margin-bottom:.4rem}
+.route__body h2,.route__body h3{margin-bottom:.4rem}
 .route__body p{color:var(--muted);max-width:60ch}
 .dark .route__body p{color:var(--muted-inv)}
 .route__meta{
@@ -413,7 +415,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
 }
 .toolcard:hover{transform:translateY(-3px);border-color:var(--ink);box-shadow:var(--shadow)}
 .toolcard__k{font-family:var(--mono);font-size:.66rem;letter-spacing:.17em;color:var(--amber);text-transform:uppercase;margin-bottom:.9rem}
-.toolcard h3{font-size:1.18rem;margin-bottom:.4rem}
+.toolcard h2,.toolcard h3{font-size:1.18rem;font-weight:700;letter-spacing:-.018em;margin-bottom:.4rem}
 .toolcard p{color:var(--muted);font-size:.92rem;margin-bottom:1.1rem}
 .toolcard__go{margin-top:auto;font-family:var(--display);font-weight:700;font-size:.9rem;color:var(--ink)}
 .toolcard__go::after{content:" →"}
@@ -468,7 +470,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
   background:#fff;border:1px solid var(--rule);border-radius:var(--r);
   padding:1.1rem 1.2rem;margin-bottom:.85rem;position:relative;
 }
-.out h4{margin-bottom:.4rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.out h4,.out .out__k{margin-bottom:.4rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:500}
 .out p{font-size:.95rem;white-space:pre-wrap}
 .copy{
   position:absolute;top:.75rem;right:.75rem;font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;
@@ -602,3 +604,9 @@ hr.rule{border:0;border-top:1px solid var(--rule);margin:clamp(2.4rem,5vw,4rem) 
 
 /* Texto del centro del mapa en inglés (más largo que el español) */
 .mapfig .core-t--en{font-size:12.5px}
+
+/* Las paradas de la ruta son H2 en proceso.html y H3 en la portada:
+   se ven igual en los dos casos. */
+.route__body h2{font-size:clamp(1.2rem,1.05rem + .7vw,1.62rem);font-weight:700;letter-spacing:-.018em}
+.out .out__k{margin:0 0 .4rem}
+.foot .foot__h{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-inv);font-weight:500;margin:0 0 1rem}

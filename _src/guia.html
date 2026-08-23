@@ -1,27 +1,80 @@
-# -*- coding: utf-8 -*-
-import sys, pathlib
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from common import page, wa
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guía de marketing local para negocios de servicio | MAPA Marketing</title>
+<meta name="description" content="Guía completa y gratuita en español: sitio web, SEO local, Perfil de Negocio de Google, Apple Maps, Bing Places, Yelp, citaciones NAP, contenido, enlaces locales y búsqueda con IA.">
+<meta property="og:title" content="Guía de marketing local para negocios de servicio | MAPA Marketing">
+<meta property="og:description" content="Guía completa y gratuita en español: sitio web, SEO local, Perfil de Negocio de Google, Apple Maps, Bing Places, Yelp, citaciones NAP, contenido, enlaces locales y búsqueda con IA.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0E2233">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=DM+Mono:wght@400;500&family=Public+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main"><span data-l="es">Saltar al contenido</span><span data-l="en">Skip to content</span></a>
 
-CH = []
+<header class="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="index.html" aria-label="MAPA Marketing">
+      <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="6" fill="#0E2233"/>
+        <path d="M7 14h26M7 26h26M14 7v26M26 7v26" stroke="#EFF1EC" stroke-opacity=".18" stroke-width="1"/>
+        <path d="M20 9.5c-4.2 0-7.6 3.3-7.6 7.4 0 5.6 7.6 13.1 7.6 13.1s7.6-7.5 7.6-13.1c0-4.1-3.4-7.4-7.6-7.4z" fill="#25D366"/>
+        <circle cx="20" cy="16.9" r="2.9" fill="#0E2233"/>
+      </svg>
+      <span class="brand__txt"><span class="brand__name">MAPA</span><span class="brand__sub">MARKETING</span></span>
+    </a>
+    <button class="burger" aria-expanded="false" aria-controls="navlinks" data-al-es="Abrir menú" data-al-en="Open menu" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav__links" id="navlinks">
+      <a href="servicios.html"><span data-l="es">Servicios</span><span data-l="en">Services</span></a>
+      <a href="proceso.html"><span data-l="es">Proceso</span><span data-l="en">Process</span></a>
+      <a href="guia.html"><span data-l="es">Guía</span><span data-l="en">Guide</span></a>
+      <a href="herramientas.html"><span data-l="es">Herramientas</span><span data-l="en">Tools</span></a>
+      <div class="langtog" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang-btn="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="btn btn--wa btn--sm nav__cta wa" href="https://wa.me/527711150327"
+         data-msg-es="Hola MAPA, tengo un negocio de servicios en Estados Unidos y quiero más clientes."
+         data-msg-en="Hi MAPA, I run a service business in the US and I want more customers.">WhatsApp</a>
+    </nav>
+  </div>
+</header>
 
-def ch(cid, t_es, t_en, es, en):
-    CH.append((cid, t_es, t_en, es, en))
+<main id="main">
+<div class="progress" aria-hidden="true"></div>
 
-def note(es, en, msg_es, msg_en, label_es="Que lo hagamos nosotros", label_en="Have us do it"):
-    return ('<div class="prose-note"><b><span data-l="es">Cómo lo hacemos nosotros</span>'
-            '<span data-l="en">How we handle it</span></b>'
-            f'<span data-l="es">{es}</span><span data-l="en">{en}</span><br><br>'
-            + wa(msg_es, msg_en, label_es, label_en, cls="btn btn--wa btn--sm", icon=False) + '</div>')
+<section class="deep grid-bg sec sec--tight">
+  <div class="wrap">
+    <p class="legend"><span data-l="es">La guía · 11 capítulos</span><span data-l="en">The guide · 11 chapters</span></p>
+    <h1 style="max-width:17ch"><span data-l="es">Guía de marketing local para negocios de servicio</span>
+      <span data-l="en">Local marketing guide for service businesses</span></h1>
+    <p class="lede"><span data-l="es">Todo lo que hacemos por nuestros clientes, explicado completo y gratis: estructura del sitio, diseño que convierte, el Perfil de Google, Apple Maps, Bing, Yelp, citaciones, contenido, enlaces, búsqueda con IA y qué medir cada mes.</span>
+      <span data-l="en">Everything we do for clients, explained in full and for free: website, design that converts, the Google profile, Apple Maps, Bing, Yelp, citations, content, links, AI search, and what to measure each month.</span></p>
+    <div class="btnrow" style="margin-top:1.8rem">
+      <a class="btn btn--wa wa" href="https://wa.me/527711150327" data-msg-es="Hola MAPA, leí su guía y prefiero que ustedes lo hagan. Mi negocio es ___ en ___." data-msg-en="Hi MAPA, I read your guide and I'd rather you did it. My business is ___ in ___."><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.16c-.24.68-1.42 1.3-1.96 1.35-.5.05-1.14.07-1.83-.11-.42-.13-.96-.31-1.66-.61-2.92-1.26-4.83-4.2-4.98-4.4-.14-.2-1.19-1.58-1.19-3.01 0-1.43.75-2.13 1.02-2.42.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.66.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.2-.15.32-.29.49-.15.17-.31.38-.44.51-.15.14-.3.3-.13.59.17.29.75 1.24 1.61 2.01 1.11.99 2.04 1.3 2.33 1.44.29.15.46.12.63-.07.17-.2.73-.85.92-1.14.2-.29.39-.24.66-.15.27.1 1.69.8 1.98.94.29.15.48.22.55.34.07.12.07.7-.17 1.38z"/></svg><span data-l="es">Que lo hagan ustedes</span><span data-l="en">Have you do it</span></a>
+      <a class="btn btn--ghost" href="herramientas.html"><span data-l="es">Ver las herramientas</span><span data-l="en">See the tools</span></a>
+    </div>
+  </div>
+</section>
 
-def take(es, en):
-    return ('<div class="keytake"><b><span data-l="es">En corto</span><span data-l="en">In short</span></b>'
-            f'<span data-l="es">{es}</span><span data-l="en">{en}</span></div>')
-
-
-# ======================================================= 1
-ch("c1", "Cómo te encuentran hoy tus clientes", "How your customers find you today",
-"""
+<section class="sec">
+  <div class="wrap guide">
+    <aside class="toc">
+      <p class="legend"><span data-l="es">Capítulos</span><span data-l="en">Chapters</span></p>
+      <ol><li><a href="#c1"><span data-l="es">Cómo te encuentran hoy tus clientes</span><span data-l="en">How your customers find you today</span></a></li><li><a href="#c2"><span data-l="es">La estructura de tu sitio</span><span data-l="en">Your site's structure</span></a></li><li><a href="#c3"><span data-l="es">Diseño que convierte la visita en mensaje</span><span data-l="en">Design that turns a visit into a message</span></a></li><li><a href="#c4"><span data-l="es">Velocidad y las bases técnicas</span><span data-l="en">Speed and the technical basics</span></a></li><li><a href="#c5"><span data-l="es">El Perfil de Negocio de Google, a fondo</span><span data-l="en">The Google Business Profile, in depth</span></a></li><li><a href="#c6"><span data-l="es">Los otros tres mapas: Apple, Bing y Yelp</span><span data-l="en">The other three maps: Apple, Bing and Yelp</span></a></li><li><a href="#c7"><span data-l="es">Citaciones y datos NAP</span><span data-l="en">Citations and NAP data</span></a></li><li><a href="#c8"><span data-l="es">Contenido que sí sirve</span><span data-l="en">Content that actually works</span></a></li><li><a href="#c9"><span data-l="es">Enlaces locales</span><span data-l="en">Local links</span></a></li><li><a href="#c10"><span data-l="es">Aparecer en las respuestas de IA</span><span data-l="en">Showing up in AI answers</span></a></li><li><a href="#c11"><span data-l="es">Qué medir cada mes</span><span data-l="en">What to measure every month</span></a></li></ol>
+    </aside>
+    <div><article class="chapter" id="c1">
+  <span class="chapter__n"><span data-l="es">Capítulo 01</span><span data-l="en">Chapter 01</span></span>
+  <h2><span data-l="es">Cómo te encuentran hoy tus clientes</span><span data-l="en">How your customers find you today</span></h2>
+  <div data-l="es">
 <p>Hace quince años, un negocio de servicio vivía de la sección amarilla y de que el vecino te recomendara. La recomendación del vecino sigue mandando, pero hoy pasa por una pantalla: te recomiendan y la persona <em>de todos modos</em> te busca en Google antes de marcarte. Si no encuentra nada, o encuentra algo abandonado, se le enfría el interés.</p>
 
 <h3>Los cuatro caminos</h3>
@@ -44,8 +97,8 @@ ch("c1", "Cómo te encuentran hoy tus clientes", "How your customers find you to
 
 <h3>Una advertencia sobre la impaciencia</h3>
 <p>El trabajo del perfil de Google puede moverse en semanas. El posicionamiento del sitio en búsquedas suele tomar de tres a seis meses de trabajo constante. No es lento porque alguien lo esté haciendo mal: es lento porque la prominencia se acumula. Quien te prometa el primer lugar en 30 días te está vendiendo humo.</p>
-""",
-"""
+</div>
+  <div data-l="en">
 <p>Fifteen years ago a service business lived off the Yellow Pages and the neighbor's referral. The neighbor's referral still rules, but now it goes through a screen: your neighbor recommends you and the person looks you up on Google <em>anyway</em> before calling. If they find nothing, or find something abandoned, the referral cools off.</p>
 
 <h3>The four paths</h3>
@@ -68,11 +121,12 @@ ch("c1", "Cómo te encuentran hoy tus clientes", "How your customers find you to
 
 <h3>A warning about impatience</h3>
 <p>Google profile work can move in weeks. Ranking the website in search usually takes three to six months of consistent effort. It's not slow because someone is doing it wrong: it's slow because prominence accumulates. Anyone promising first place in 30 days is selling smoke.</p>
-""")
-
-# ======================================================= 2
-ch("c2", "La estructura de tu sitio", "Your site's structure",
-"""
+</div>
+</article>
+<article class="chapter" id="c2">
+  <span class="chapter__n"><span data-l="es">Capítulo 02</span><span data-l="en">Chapter 02</span></span>
+  <h2><span data-l="es">La estructura de tu sitio</span><span data-l="en">Your site's structure</span></h2>
+  <div data-l="es">
 <p>El error más caro que comete un negocio de servicio con su sitio web es tener una sola página llamada “Servicios” con una lista de todo lo que hace. Se siente ordenado. Y es la razón número uno por la que no aparece en búsquedas.</p>
 <p>El segundo error más caro es el arreglo que casi todos intentan después: hacer una página por servicio y aparte una página por ciudad. Suena lógico y no funciona.</p>
 
@@ -124,9 +178,8 @@ ch("c2", "La estructura de tu sitio", "Your site's structure",
 
 <h3>Cómo se enlazan entre ellas</h3>
 <p>Cada página de servicio y ciudad debe enlazar hacia el índice de servicios, hacia el mismo servicio en las ciudades vecinas, y hacia los otros servicios que ofreces en esa misma ciudad. Así una persona que llegó buscando una fuga en Katy encuentra fácil que también cambias calentadores en Katy.</p>
-""" + take("Una página por cada servicio en cada ciudad, no una de servicios y otra de ciudades. Empieza por la combinación que más dinero te deja y hazla de verdad, no copiando.",
-            "One page for each service in each city, not one services page plus one city page. Start with the combination that makes you the most money and write it properly, not by copying."),
-"""
+<div class="keytake"><b><span data-l="es">En corto</span><span data-l="en">In short</span></b><span data-l="es">Una página por cada servicio en cada ciudad, no una de servicios y otra de ciudades. Empieza por la combinación que más dinero te deja y hazla de verdad, no copiando.</span><span data-l="en">One page for each service in each city, not one services page plus one city page. Start with the combination that makes you the most money and write it properly, not by copying.</span></div></div>
+  <div data-l="en">
 <p>The most expensive mistake a service business makes with its website is having one page called “Services” with a list of everything it does. It feels tidy. And it's the number one reason the site doesn't show up in search.</p>
 <p>The second most expensive mistake is the fix almost everyone attempts next: one page per service, plus separate pages per city. It sounds logical and it doesn't work.</p>
 
@@ -178,12 +231,12 @@ ch("c2", "La estructura de tu sitio", "Your site's structure",
 
 <h3>How they link to each other</h3>
 <p>Each service-and-city page should link to the services index, to the same service in neighboring cities, and to your other services in that same city. That way someone who arrived looking for a leak in Katy easily discovers you also replace water heaters in Katy.</p>
-""" + take("One page for each service in each city, not one services page plus one city page. Start with the combination that makes you the most money and write it properly, not by copying.",
-            "One page for each service in each city, not one services page plus one city page. Start with the combination that makes you the most money and write it properly, not by copying."))
-
-# ======================================================= 3
-ch("c3", "Diseño que convierte la visita en mensaje", "Design that turns a visit into a message",
-"""
+<div class="keytake"><b><span data-l="es">En corto</span><span data-l="en">In short</span></b><span data-l="es">One page for each service in each city, not one services page plus one city page. Start with the combination that makes you the most money and write it properly, not by copying.</span><span data-l="en">One page for each service in each city, not one services page plus one city page. Start with the combination that makes you the most money and write it properly, not by copying.</span></div></div>
+</article>
+<article class="chapter" id="c3">
+  <span class="chapter__n"><span data-l="es">Capítulo 03</span><span data-l="en">Chapter 03</span></span>
+  <h2><span data-l="es">Diseño que convierte la visita en mensaje</span><span data-l="en">Design that turns a visit into a message</span></h2>
+  <div data-l="es">
 <p>Traer visitas es la mitad del trabajo. La otra mitad es que esa visita te escriba. Un sitio con mil visitas al mes y dos llamadas está roto, y no lo arregla más tráfico.</p>
 
 <h3>Lo primero que se ve, sin bajar la pantalla</h3>
@@ -214,9 +267,8 @@ ch("c3", "Diseño que convierte la visita en mensaje", "Design that turns a visi
 
 <h3>Prueba, no adjetivos</h3>
 <p>“Servicio de calidad con años de experiencia” no convence a nadie porque lo dice todo el mundo. Lo que convence: fotos de trabajos reales tuyos, con tu camioneta y tu gente; reseñas con nombre y ciudad; la licencia y el seguro visibles; y decir cuánto cuesta más o menos, aunque sea un rango.</p>
-""" + take("Botón de contacto visible sin bajar, formularios cortos, fotos reales, y mapas de calor para dejar de adivinar dónde se pierde la gente.",
-            "Contact button visible without scrolling, short forms, real photos, and heatmaps so you stop guessing where people drop off."),
-"""
+<div class="keytake"><b><span data-l="es">En corto</span><span data-l="en">In short</span></b><span data-l="es">Botón de contacto visible sin bajar, formularios cortos, fotos reales, y mapas de calor para dejar de adivinar dónde se pierde la gente.</span><span data-l="en">Contact button visible without scrolling, short forms, real photos, and heatmaps so you stop guessing where people drop off.</span></div></div>
+  <div data-l="en">
 <p>Bringing in visits is half the job. The other half is getting that visit to message you. A site with a thousand visits a month and two calls is broken, and more traffic won't fix it.</p>
 
 <h3>What's visible without scrolling</h3>
@@ -247,12 +299,12 @@ ch("c3", "Diseño que convierte la visita en mensaje", "Design that turns a visi
 
 <h3>Proof, not adjectives</h3>
 <p>“Quality service with years of experience” convinces nobody because everyone says it. What convinces: photos of your real jobs, with your truck and your crew; reviews with a name and a city; license and insurance visible; and telling people roughly what it costs, even as a range.</p>
-""" + take("Contact button visible without scrolling, short forms, real photos, and heatmaps so you stop guessing where people drop off.",
-            "Contact button visible without scrolling, short forms, real photos, and heatmaps so you stop guessing where people drop off."))
-
-# ======================================================= 4
-ch("c4", "Velocidad y las bases técnicas", "Speed and the technical basics",
-"""
+<div class="keytake"><b><span data-l="es">En corto</span><span data-l="en">In short</span></b><span data-l="es">Contact button visible without scrolling, short forms, real photos, and heatmaps so you stop guessing where people drop off.</span><span data-l="en">Contact button visible without scrolling, short forms, real photos, and heatmaps so you stop guessing where people drop off.</span></div></div>
+</article>
+<article class="chapter" id="c4">
+  <span class="chapter__n"><span data-l="es">Capítulo 04</span><span data-l="en">Chapter 04</span></span>
+  <h2><span data-l="es">Velocidad y las bases técnicas</span><span data-l="en">Speed and the technical basics</span></h2>
+  <div data-l="es">
 <p>Nadie contrata a una agencia por “datos estructurados”. Pero si esto está mal, todo lo demás rinde menos. Son pocas cosas y se arreglan una vez.</p>
 
 <h3>Velocidad</h3>
@@ -283,9 +335,8 @@ ch("c4", "Velocidad y las bases técnicas", "Speed and the technical basics",
   <li>Texto alternativo en las imágenes, describiendo lo que se ve.</li>
   <li>Medición instalada, para saber cuántas llamadas y mensajes salen del sitio.</li>
 </ul>
-""" + take("Comprime las fotos, dale a cada página su título propio, pon datos estructurados y mide desde un celular con datos móviles.",
-            "Compress the photos, give every page its own title, add structured data, and measure from a phone on mobile data."),
-"""
+<div class="keytake"><b><span data-l="es">En corto</span><span data-l="en">In short</span></b><span data-l="es">Comprime las fotos, dale a cada página su título propio, pon datos estructurados y mide desde un celular con datos móviles.</span><span data-l="en">Compress the photos, give every page its own title, add structured data, and measure from a phone on mobile data.</span></div></div>
+  <div data-l="en">
 <p>Nobody hires an agency for “structured data”. But if this is wrong, everything else underperforms. It's a short list and it gets fixed once.</p>
 
 <h3>Speed</h3>
@@ -316,12 +367,12 @@ ch("c4", "Velocidad y las bases técnicas", "Speed and the technical basics",
   <li>Alt text on images, describing what's actually shown.</li>
   <li>Analytics installed, so you know how many calls and messages come from the site.</li>
 </ul>
-""" + take("Compress the photos, give every page its own title, add structured data, and measure from a phone on mobile data.",
-            "Compress the photos, give every page its own title, add structured data, and measure from a phone on mobile data."))
-
-# ======================================================= 5
-ch("c5", "El Perfil de Negocio de Google, a fondo", "The Google Business Profile, in depth",
-"""
+<div class="keytake"><b><span data-l="es">En corto</span><span data-l="en">In short</span></b><span data-l="es">Compress the photos, give every page its own title, add structured data, and measure from a phone on mobile data.</span><span data-l="en">Compress the photos, give every page its own title, add structured data, and measure from a phone on mobile data.</span></div></div>
+</article>
+<article class="chapter" id="c5">
+  <span class="chapter__n"><span data-l="es">Capítulo 05</span><span data-l="en">Chapter 05</span></span>
+  <h2><span data-l="es">El Perfil de Negocio de Google, a fondo</span><span data-l="en">The Google Business Profile, in depth</span></h2>
+  <div data-l="es">
 <p>Si solo pudieras arreglar una cosa este mes, sería esta. El Perfil de Negocio de Google es lo que decide si sales en el mapa, y es gratis.</p>
 
 <h3>Categoría principal: la decisión más importante</h3>
@@ -350,11 +401,8 @@ ch("c5", "El Perfil de Negocio de Google, a fondo", "The Google Business Profile
   <li><b>Nunca las compres ni las inventes.</b> Es la forma más rápida de perder el perfil, y se detecta.</li>
 </ul>
 <p>Ante una reseña mala: no discutas los detalles en público, reconoce lo que se pueda reconocer, e invita a seguir la conversación en privado. Una respuesta serena a una reseña de una estrella vende más que diez reseñas de cinco.</p>
-""" + note("Optimizamos el perfil completo (categorías, servicios, atributos, área, horarios), lo mantenemos activo con publicaciones y foto, y subimos fotos nuevas cada mes.",
-           "We optimize the whole profile (categories, services, attributes, area, hours), keep it active with posts and photos, and upload new photos every month.",
-           "Hola MAPA, quiero que revisen y optimicen mi Perfil de Negocio de Google.",
-           "Hi MAPA, I want you to review and optimize my Google Business Profile."),
-"""
+<div class="prose-note"><b><span data-l="es">Cómo lo hacemos nosotros</span><span data-l="en">How we handle it</span></b><span data-l="es">Optimizamos el perfil completo (categorías, servicios, atributos, área, horarios), lo mantenemos activo con publicaciones y foto, y subimos fotos nuevas cada mes.</span><span data-l="en">We optimize the whole profile (categories, services, attributes, area, hours), keep it active with posts and photos, and upload new photos every month.</span><br><br><a class="btn btn--wa btn--sm wa" href="https://wa.me/527711150327" data-msg-es="Hola MAPA, quiero que revisen y optimicen mi Perfil de Negocio de Google." data-msg-en="Hi MAPA, I want you to review and optimize my Google Business Profile."><span data-l="es">Que lo hagamos nosotros</span><span data-l="en">Have us do it</span></a></div></div>
+  <div data-l="en">
 <p>If you could fix only one thing this month, this would be it. The Google Business Profile decides whether you appear on the map, and it's free.</p>
 
 <h3>Primary category: the most important decision</h3>
@@ -383,14 +431,12 @@ ch("c5", "El Perfil de Negocio de Google, a fondo", "The Google Business Profile
   <li><b>Never buy or invent them.</b> It's the fastest way to lose the profile, and it gets caught.</li>
 </ul>
 <p>Facing a bad review: don't argue details in public, acknowledge what can be acknowledged, and invite the conversation to continue privately. A calm reply to a one-star review sells more than ten five-star ones.</p>
-""" + note("We optimize the whole profile (categories, services, attributes, area, hours), keep it active with posts and photos, and upload new photos every month.",
-           "We optimize the whole profile (categories, services, attributes, area, hours), keep it active with posts and photos, and upload new photos every month.",
-           "Hola MAPA, quiero que revisen y optimicen mi Perfil de Negocio de Google.",
-           "Hi MAPA, I want you to review and optimize my Google Business Profile."))
-
-# ======================================================= 6
-ch("c6", "Los otros tres mapas: Apple, Bing y Yelp", "The other three maps: Apple, Bing and Yelp",
-"""
+<div class="prose-note"><b><span data-l="es">Cómo lo hacemos nosotros</span><span data-l="en">How we handle it</span></b><span data-l="es">We optimize the whole profile (categories, services, attributes, area, hours), keep it active with posts and photos, and upload new photos every month.</span><span data-l="en">We optimize the whole profile (categories, services, attributes, area, hours), keep it active with posts and photos, and upload new photos every month.</span><br><br><a class="btn btn--wa btn--sm wa" href="https://wa.me/527711150327" data-msg-es="Hola MAPA, quiero que revisen y optimicen mi Perfil de Negocio de Google." data-msg-en="Hi MAPA, I want you to review and optimize my Google Business Profile."><span data-l="es">Que lo hagamos nosotros</span><span data-l="en">Have us do it</span></a></div></div>
+</article>
+<article class="chapter" id="c6">
+  <span class="chapter__n"><span data-l="es">Capítulo 06</span><span data-l="en">Chapter 06</span></span>
+  <h2><span data-l="es">Los otros tres mapas: Apple, Bing y Yelp</span><span data-l="en">The other three maps: Apple, Bing and Yelp</span></h2>
+  <div data-l="es">
 <p>Casi todo el mundo trabaja Google y deja los otros tres abandonados. Ahí hay ventaja, porque la competencia tampoco los está trabajando.</p>
 
 <h3>Apple Business Connect</h3>
@@ -413,11 +459,8 @@ ch("c6", "Los otros tres mapas: Apple, Bing y Yelp", "The other three maps: Appl
 
 <h3>La regla que une a los cuatro</h3>
 <p>El mismo nombre, la misma dirección, el mismo teléfono, la misma categoría y las mismas fotos en los cuatro. La consistencia entre plataformas es en sí misma una señal de confianza: le dice a los buscadores que este negocio es real y que la información es fiable.</p>
-""" + note("Reclamamos y mantenemos los cuatro perfiles con los mismos datos y las mismas fotos, y subimos fotos nuevas cada mes a Google, Apple Maps y Yelp.",
-           "We claim and maintain all four profiles with the same data and the same photos, and upload new photos monthly to Google, Apple Maps and Yelp.",
-           "Hola MAPA, quiero que me pongan en orden Apple Maps, Bing Places y Yelp.",
-           "Hi MAPA, I want you to get Apple Maps, Bing Places and Yelp in order."),
-"""
+<div class="prose-note"><b><span data-l="es">Cómo lo hacemos nosotros</span><span data-l="en">How we handle it</span></b><span data-l="es">Reclamamos y mantenemos los cuatro perfiles con los mismos datos y las mismas fotos, y subimos fotos nuevas cada mes a Google, Apple Maps y Yelp.</span><span data-l="en">We claim and maintain all four profiles with the same data and the same photos, and upload new photos monthly to Google, Apple Maps and Yelp.</span><br><br><a class="btn btn--wa btn--sm wa" href="https://wa.me/527711150327" data-msg-es="Hola MAPA, quiero que me pongan en orden Apple Maps, Bing Places y Yelp." data-msg-en="Hi MAPA, I want you to get Apple Maps, Bing Places and Yelp in order."><span data-l="es">Que lo hagamos nosotros</span><span data-l="en">Have us do it</span></a></div></div>
+  <div data-l="en">
 <p>Almost everyone works Google and leaves the other three abandoned. There's an advantage there, because your competition isn't working them either.</p>
 
 <h3>Apple Business Connect</h3>
@@ -440,14 +483,12 @@ ch("c6", "Los otros tres mapas: Apple, Bing y Yelp", "The other three maps: Appl
 
 <h3>The rule that ties all four together</h3>
 <p>Same name, same address, same phone, same category and same photos across all four. Cross-platform consistency is itself a trust signal: it tells search engines this business is real and its information is reliable.</p>
-""" + note("We claim and maintain all four profiles with the same data and the same photos, and upload new photos monthly to Google, Apple Maps and Yelp.",
-           "We claim and maintain all four profiles with the same data and the same photos, and upload new photos monthly to Google, Apple Maps and Yelp.",
-           "Hola MAPA, quiero que me pongan en orden Apple Maps, Bing Places y Yelp.",
-           "Hi MAPA, I want you to get Apple Maps, Bing Places and Yelp in order."))
-
-# ======================================================= 7
-ch("c7", "Citaciones y datos NAP", "Citations and NAP data",
-"""
+<div class="prose-note"><b><span data-l="es">Cómo lo hacemos nosotros</span><span data-l="en">How we handle it</span></b><span data-l="es">We claim and maintain all four profiles with the same data and the same photos, and upload new photos monthly to Google, Apple Maps and Yelp.</span><span data-l="en">We claim and maintain all four profiles with the same data and the same photos, and upload new photos monthly to Google, Apple Maps and Yelp.</span><br><br><a class="btn btn--wa btn--sm wa" href="https://wa.me/527711150327" data-msg-es="Hola MAPA, quiero que me pongan en orden Apple Maps, Bing Places y Yelp." data-msg-en="Hi MAPA, I want you to get Apple Maps, Bing Places and Yelp in order."><span data-l="es">Que lo hagamos nosotros</span><span data-l="en">Have us do it</span></a></div></div>
+</article>
+<article class="chapter" id="c7">
+  <span class="chapter__n"><span data-l="es">Capítulo 07</span><span data-l="en">Chapter 07</span></span>
+  <h2><span data-l="es">Citaciones y datos NAP</span><span data-l="en">Citations and NAP data</span></h2>
+  <div data-l="es">
 <p>Una citación es cualquier lugar en internet donde aparece el nombre, la dirección y el teléfono de tu negocio, aunque no haya enlace. NAP son esas tres palabras en inglés: Name, Address, Phone.</p>
 
 <h3>Por qué importan</h3>
@@ -479,11 +520,8 @@ ch("c7", "Citaciones y datos NAP", "Citations and NAP data",
 
 <h3>Limpiar vale más que dar de alta</h3>
 <p>Muchos negocios ya tienen fichas viejas que ellos nunca crearon, con el teléfono anterior o la dirección de hace tres mudanzas. Buscar esas fichas y corregirlas o pedir que las borren suele mover más la aguja que registrarse en veinte directorios nuevos.</p>
-""" + note("Fijamos tu NAP, construimos tus citaciones durante los primeros meses y buscamos y corregimos las fichas viejas con datos equivocados. Después solo hay que vigilarlas.",
-           "We lock your NAP, build out your citations over the first months, and hunt down and correct old listings with wrong data. After that they just need monitoring.",
-           "Hola MAPA, quiero que revisen y arreglen mis citaciones.",
-           "Hi MAPA, I want you to review and fix my citations."),
-"""
+<div class="prose-note"><b><span data-l="es">Cómo lo hacemos nosotros</span><span data-l="en">How we handle it</span></b><span data-l="es">Fijamos tu NAP, construimos tus citaciones durante los primeros meses y buscamos y corregimos las fichas viejas con datos equivocados. Después solo hay que vigilarlas.</span><span data-l="en">We lock your NAP, build out your citations over the first months, and hunt down and correct old listings with wrong data. After that they just need monitoring.</span><br><br><a class="btn btn--wa btn--sm wa" href="https://wa.me/527711150327" data-msg-es="Hola MAPA, quiero que revisen y arreglen mis citaciones." data-msg-en="Hi MAPA, I want you to review and fix my citations."><span data-l="es">Que lo hagamos nosotros</span><span data-l="en">Have us do it</span></a></div></div>
+  <div data-l="en">
 <p>A citation is any place on the internet where your business name, address and phone appear, even without a link. NAP is those three words: Name, Address, Phone.</p>
 
 <h3>Why they matter</h3>
@@ -515,14 +553,12 @@ ch("c7", "Citaciones y datos NAP", "Citations and NAP data",
 
 <h3>Cleaning up beats signing up</h3>
 <p>Many businesses already have old listings they never created, with a previous phone number or an address from three moves ago. Finding those and correcting them or requesting removal usually moves the needle more than registering on twenty new directories.</p>
-""" + note("We lock your NAP, build out your citations over the first months, and hunt down and correct old listings with wrong data. After that they just need monitoring.",
-           "We lock your NAP, build out your citations over the first months, and hunt down and correct old listings with wrong data. After that they just need monitoring.",
-           "Hola MAPA, quiero que revisen y arreglen mis citaciones.",
-           "Hi MAPA, I want you to review and fix my citations."))
-
-# ======================================================= 8
-ch("c8", "Contenido que sí sirve", "Content that actually works",
-"""
+<div class="prose-note"><b><span data-l="es">Cómo lo hacemos nosotros</span><span data-l="en">How we handle it</span></b><span data-l="es">We lock your NAP, build out your citations over the first months, and hunt down and correct old listings with wrong data. After that they just need monitoring.</span><span data-l="en">We lock your NAP, build out your citations over the first months, and hunt down and correct old listings with wrong data. After that they just need monitoring.</span><br><br><a class="btn btn--wa btn--sm wa" href="https://wa.me/527711150327" data-msg-es="Hola MAPA, quiero que revisen y arreglen mis citaciones." data-msg-en="Hi MAPA, I want you to review and fix my citations."><span data-l="es">Que lo hagamos nosotros</span><span data-l="en">Have us do it</span></a></div></div>
+</article>
+<article class="chapter" id="c8">
+  <span class="chapter__n"><span data-l="es">Capítulo 08</span><span data-l="en">Chapter 08</span></span>
+  <h2><span data-l="es">Contenido que sí sirve</span><span data-l="en">Content that actually works</span></h2>
+  <div data-l="es">
 <p>“Hay que hacer un blog” es uno de los consejos que peor se ejecutan en el marketing local. La mayoría de los blogs de negocios de servicio son tres notas de 2019 sobre “la importancia del mantenimiento preventivo”. Eso no sirve para nada.</p>
 
 <h3>De dónde salen los temas buenos</h3>
@@ -557,11 +593,8 @@ ch("c8", "Contenido que sí sirve", "Content that actually works",
 
 <h3>Sobre escribir con IA</h3>
 <p>Es una herramienta útil para investigar temas, ordenar ideas y hacer un primer borrador. No es una herramienta para publicar sin leer. Un artículo genérico que podría ser de cualquier plomero del país no posiciona, y lo más importante: no convence a nadie de llamarte. El valor está en lo que solo tú sabes.</p>
-""" + note("Escribimos y publicamos contenido nuevo cada mes, sobre las preguntas reales de tu oficio y tu zona, enlazado a tus páginas de servicio y ciudad.",
-           "We write and publish new content every month, on the real questions in your trade and your area, linked to your service-and-city pages.",
-           "Hola MAPA, quiero que ustedes lleven el contenido de mi sitio.",
-           "Hi MAPA, I want you to handle the content on my site."),
-"""
+<div class="prose-note"><b><span data-l="es">Cómo lo hacemos nosotros</span><span data-l="en">How we handle it</span></b><span data-l="es">Escribimos y publicamos contenido nuevo cada mes, sobre las preguntas reales de tu oficio y tu zona, enlazado a tus páginas de servicio y ciudad.</span><span data-l="en">We write and publish new content every month, on the real questions in your trade and your area, linked to your service-and-city pages.</span><br><br><a class="btn btn--wa btn--sm wa" href="https://wa.me/527711150327" data-msg-es="Hola MAPA, quiero que ustedes lleven el contenido de mi sitio." data-msg-en="Hi MAPA, I want you to handle the content on my site."><span data-l="es">Que lo hagamos nosotros</span><span data-l="en">Have us do it</span></a></div></div>
+  <div data-l="en">
 <p>“You should have a blog” is one of the worst-executed pieces of advice in local marketing. Most service business blogs are three posts from 2019 about “the importance of preventive maintenance”. That does nothing.</p>
 
 <h3>Where good topics come from</h3>
@@ -596,14 +629,12 @@ ch("c8", "Contenido que sí sirve", "Content that actually works",
 
 <h3>On writing with AI</h3>
 <p>It's a useful tool for researching topics, organizing ideas and drafting. It is not a tool for publishing unread. A generic article that could belong to any plumber in the country doesn't rank, and more importantly: it convinces nobody to call you. The value is in what only you know.</p>
-""" + note("We write and publish new content every month, on the real questions in your trade and your area, linked to your service-and-city pages.",
-           "We write and publish new content every month, on the real questions in your trade and your area, linked to your service-and-city pages.",
-           "Hola MAPA, quiero que ustedes lleven el contenido de mi sitio.",
-           "Hi MAPA, I want you to handle the content on my site."))
-
-# ======================================================= 9
-ch("c9", "Enlaces locales", "Local links",
-"""
+<div class="prose-note"><b><span data-l="es">Cómo lo hacemos nosotros</span><span data-l="en">How we handle it</span></b><span data-l="es">We write and publish new content every month, on the real questions in your trade and your area, linked to your service-and-city pages.</span><span data-l="en">We write and publish new content every month, on the real questions in your trade and your area, linked to your service-and-city pages.</span><br><br><a class="btn btn--wa btn--sm wa" href="https://wa.me/527711150327" data-msg-es="Hola MAPA, quiero que ustedes lleven el contenido de mi sitio." data-msg-en="Hi MAPA, I want you to handle the content on my site."><span data-l="es">Que lo hagamos nosotros</span><span data-l="en">Have us do it</span></a></div></div>
+</article>
+<article class="chapter" id="c9">
+  <span class="chapter__n"><span data-l="es">Capítulo 09</span><span data-l="en">Chapter 09</span></span>
+  <h2><span data-l="es">Enlaces locales</span><span data-l="en">Local links</span></h2>
+  <div data-l="es">
 <p>Un enlace es cuando otro sitio pone la dirección del tuyo en una de sus páginas. Para los buscadores es un voto: alguien más considera que vale la pena mandarte gente.</p>
 
 <h3>Uno bueno vale más que cincuenta malos</h3>
@@ -625,11 +656,8 @@ ch("c9", "Enlaces locales", "Local links",
 
 <h3>Cómo pedirlos sin sonar a spam</h3>
 <p>El error es mandar un correo genérico pidiendo un enlace. Lo que funciona es dar algo primero: patrocina de verdad, participa de verdad, ofrece un descuento a los miembros de la asociación, o escribe algo útil que ellos quieran publicar. El enlace viene solo cuando hay una relación real detrás.</p>
-""" + note("Conseguimos enlaces locales de sitios reales relacionados con tu oficio y tu ciudad, cuando tu competencia y tu zona lo piden. Nada de paquetes ni granjas de enlaces, y nada de forzar enlaces que no necesitas.",
-           "We earn local links from real sites related to your trade and your city, when your competition and your area call for it. No packages, no link farms, and no forcing links you don't need.",
-           "Hola MAPA, quiero que trabajen los enlaces locales de mi negocio.",
-           "Hi MAPA, I want you to work on local links for my business."),
-"""
+<div class="prose-note"><b><span data-l="es">Cómo lo hacemos nosotros</span><span data-l="en">How we handle it</span></b><span data-l="es">Conseguimos enlaces locales de sitios reales relacionados con tu oficio y tu ciudad, cuando tu competencia y tu zona lo piden. Nada de paquetes ni granjas de enlaces, y nada de forzar enlaces que no necesitas.</span><span data-l="en">We earn local links from real sites related to your trade and your city, when your competition and your area call for it. No packages, no link farms, and no forcing links you don't need.</span><br><br><a class="btn btn--wa btn--sm wa" href="https://wa.me/527711150327" data-msg-es="Hola MAPA, quiero que trabajen los enlaces locales de mi negocio." data-msg-en="Hi MAPA, I want you to work on local links for my business."><span data-l="es">Que lo hagamos nosotros</span><span data-l="en">Have us do it</span></a></div></div>
+  <div data-l="en">
 <p>A link is when another site puts your address on one of its pages. To search engines it's a vote: someone else thinks you're worth sending people to.</p>
 
 <h3>One good link beats fifty bad ones</h3>
@@ -651,14 +679,12 @@ ch("c9", "Enlaces locales", "Local links",
 
 <h3>How to ask without sounding like spam</h3>
 <p>The mistake is sending a generic email asking for a link. What works is giving something first: actually sponsor, actually participate, offer a discount to association members, or write something useful they'd want to publish. The link follows on its own when there's a real relationship behind it.</p>
-""" + note("We earn local links from real sites related to your trade and your city, when your competition and your area call for it. No packages, no link farms, and no forcing links you don't need.",
-           "We earn local links from real sites related to your trade and your city, when your competition and your area call for it. No packages, no link farms, and no forcing links you don't need.",
-           "Hola MAPA, quiero que trabajen los enlaces locales de mi negocio.",
-           "Hi MAPA, I want you to work on local links for my business."))
-
-# ======================================================= 10
-ch("c10", "Aparecer en las respuestas de IA", "Showing up in AI answers",
-"""
+<div class="prose-note"><b><span data-l="es">Cómo lo hacemos nosotros</span><span data-l="en">How we handle it</span></b><span data-l="es">We earn local links from real sites related to your trade and your city, when your competition and your area call for it. No packages, no link farms, and no forcing links you don't need.</span><span data-l="en">We earn local links from real sites related to your trade and your city, when your competition and your area call for it. No packages, no link farms, and no forcing links you don't need.</span><br><br><a class="btn btn--wa btn--sm wa" href="https://wa.me/527711150327" data-msg-es="Hola MAPA, quiero que trabajen los enlaces locales de mi negocio." data-msg-en="Hi MAPA, I want you to work on local links for my business."><span data-l="es">Que lo hagamos nosotros</span><span data-l="en">Have us do it</span></a></div></div>
+</article>
+<article class="chapter" id="c10">
+  <span class="chapter__n"><span data-l="es">Capítulo 10</span><span data-l="en">Chapter 10</span></span>
+  <h2><span data-l="es">Aparecer en las respuestas de IA</span><span data-l="en">Showing up in AI answers</span></h2>
+  <div data-l="es">
 <p>Cada vez más gente hace la pregunta directamente: “necesito un plomero cerca de Sugar Land que trabaje fines de semana, ¿a quién me recomiendas?”. Y recibe una respuesta con dos o tres nombres, sin lista de diez resultados azules.</p>
 
 <h3>Eso cambia menos de lo que parece</h3>
@@ -679,9 +705,8 @@ ch("c10", "Aparecer en las respuestas de IA", "Showing up in AI answers",
 
 <h3>Qué no hacer</h3>
 <p>No hay un truco para “hackear” la IA, y quien venda uno está inventando. Tampoco sirve llenar el sitio de texto escondido o de frases repetidas: los modelos que responden estas preguntas se apoyan en fuentes verificables, no en trucos de los años dos mil.</p>
-""" + take("Las respuestas de IA leen tus perfiles, tus reseñas, tus directorios y tu sitio. Arreglar eso es la estrategia; no hay otra aparte.",
-            "AI answers read your profiles, your reviews, your directories and your site. Fixing those is the strategy; there is no separate one."),
-"""
+<div class="keytake"><b><span data-l="es">En corto</span><span data-l="en">In short</span></b><span data-l="es">Las respuestas de IA leen tus perfiles, tus reseñas, tus directorios y tu sitio. Arreglar eso es la estrategia; no hay otra aparte.</span><span data-l="en">AI answers read your profiles, your reviews, your directories and your site. Fixing those is the strategy; there is no separate one.</span></div></div>
+  <div data-l="en">
 <p>More and more people ask the question directly: “I need a plumber near Sugar Land who works weekends, who do you recommend?” And they get an answer with two or three names, no list of ten blue results.</p>
 
 <h3>That changes less than it seems</h3>
@@ -702,12 +727,12 @@ ch("c10", "Aparecer en las respuestas de IA", "Showing up in AI answers",
 
 <h3>What not to do</h3>
 <p>There's no trick to “hack” AI, and anyone selling one is making it up. Filling your site with hidden text or repeated phrases doesn't work either: the models answering these questions lean on verifiable sources, not on tricks from the 2000s.</p>
-""" + take("AI answers read your profiles, your reviews, your directories and your site. Fixing those is the strategy; there is no separate one.",
-            "AI answers read your profiles, your reviews, your directories and your site. Fixing those is the strategy; there is no separate one."))
-
-# ======================================================= 11
-ch("c11", "Qué medir cada mes", "What to measure every month",
-"""
+<div class="keytake"><b><span data-l="es">En corto</span><span data-l="en">In short</span></b><span data-l="es">AI answers read your profiles, your reviews, your directories and your site. Fixing those is the strategy; there is no separate one.</span><span data-l="en">AI answers read your profiles, your reviews, your directories and your site. Fixing those is the strategy; there is no separate one.</span></div></div>
+</article>
+<article class="chapter" id="c11">
+  <span class="chapter__n"><span data-l="es">Capítulo 11</span><span data-l="en">Chapter 11</span></span>
+  <h2><span data-l="es">Qué medir cada mes</span><span data-l="en">What to measure every month</span></h2>
+  <div data-l="es">
 <p>El error clásico es medir lo que se ve bonito en una gráfica. Las visitas al sitio no son un número de negocio. Las llamadas sí.</p>
 
 <h3>Los cinco números que importan</h3>
@@ -738,12 +763,8 @@ De dónde vinieron ............. 7 Google, 3 recomendación, 2 sitio</pre>
 
 <h3>Y lo más importante de todo</h3>
 <p>Contesta rápido. Podemos ponerte en el primer lugar del mapa y aun así perder el trabajo si tardas tres horas en devolver el mensaje. En servicios locales, quien contesta primero gana la mayoría de las veces. Ninguna estrategia de marketing arregla eso.</p>
-""" + note("Cada mes te mandamos el reporte por WhatsApp con estos números y con lo que se hizo, en lenguaje normal y en tu idioma.",
-           "Every month we send you the report over WhatsApp with these numbers and what was done, in plain language and in your language.",
-           "Hola MAPA, quiero empezar. Mi negocio es ___ y trabajo en ___.",
-           "Hi MAPA, I want to get started. My business is ___ and I work in ___.",
-           "Empezar por WhatsApp", "Start on WhatsApp"),
-"""
+<div class="prose-note"><b><span data-l="es">Cómo lo hacemos nosotros</span><span data-l="en">How we handle it</span></b><span data-l="es">Cada mes te mandamos el reporte por WhatsApp con estos números y con lo que se hizo, en lenguaje normal y en tu idioma.</span><span data-l="en">Every month we send you the report over WhatsApp with these numbers and what was done, in plain language and in your language.</span><br><br><a class="btn btn--wa btn--sm wa" href="https://wa.me/527711150327" data-msg-es="Hola MAPA, quiero empezar. Mi negocio es ___ y trabajo en ___." data-msg-en="Hi MAPA, I want to get started. My business is ___ and I work in ___."><span data-l="es">Empezar por WhatsApp</span><span data-l="en">Start on WhatsApp</span></a></div></div>
+  <div data-l="en">
 <p>The classic mistake is measuring what looks good on a chart. Website visits is not a business number. Calls are.</p>
 
 <h3>The five numbers that matter</h3>
@@ -774,53 +795,9 @@ Where they came from .......... 7 Google, 3 referral, 2 website</pre>
 
 <h3>And the most important thing of all</h3>
 <p>Answer fast. We can put you first on the map and still lose the job if you take three hours to reply. In local services, whoever answers first wins most of the time. No marketing strategy fixes that.</p>
-""" + note("Every month we send you the report over WhatsApp with these numbers and what was done, in plain language and in your language.",
-           "Every month we send you the report over WhatsApp with these numbers and what was done, in plain language and in your language.",
-           "Hola MAPA, quiero empezar. Mi negocio es ___ y trabajo en ___.",
-           "Hi MAPA, I want to get started. My business is ___ and I work in ___.",
-           "Empezar por WhatsApp", "Start on WhatsApp"))
-
-
-# ======================================================= assemble
-toc = "".join(
-    f'<li><a href="#{cid}"><span data-l="es">{t_es}</span><span data-l="en">{t_en}</span></a></li>'
-    for cid, t_es, t_en, _, _ in CH)
-
-chapters = ""
-for i, (cid, t_es, t_en, es, en) in enumerate(CH, 1):
-    chapters += f'''<article class="chapter" id="{cid}">
-  <span class="chapter__n"><span data-l="es">Capítulo {i:02d}</span><span data-l="en">Chapter {i:02d}</span></span>
-  <h2><span data-l="es">{t_es}</span><span data-l="en">{t_en}</span></h2>
-  <div data-l="es">{es}</div>
-  <div data-l="en">{en}</div>
+<div class="prose-note"><b><span data-l="es">Cómo lo hacemos nosotros</span><span data-l="en">How we handle it</span></b><span data-l="es">Every month we send you the report over WhatsApp with these numbers and what was done, in plain language and in your language.</span><span data-l="en">Every month we send you the report over WhatsApp with these numbers and what was done, in plain language and in your language.</span><br><br><a class="btn btn--wa btn--sm wa" href="https://wa.me/527711150327" data-msg-es="Hola MAPA, quiero empezar. Mi negocio es ___ y trabajo en ___." data-msg-en="Hi MAPA, I want to get started. My business is ___ and I work in ___."><span data-l="es">Empezar por WhatsApp</span><span data-l="en">Start on WhatsApp</span></a></div></div>
 </article>
-'''
-
-body = f'''<div class="progress" aria-hidden="true"></div>
-
-<section class="deep grid-bg sec sec--tight">
-  <div class="wrap">
-    <p class="legend"><span data-l="es">La guía · 11 capítulos</span><span data-l="en">The guide · 11 chapters</span></p>
-    <h1 style="max-width:17ch"><span data-l="es">Guía de marketing local para negocios de servicio</span>
-      <span data-l="en">Local marketing guide for service businesses</span></h1>
-    <p class="lede"><span data-l="es">Todo lo que hacemos por nuestros clientes, explicado completo y gratis: estructura del sitio, diseño que convierte, el Perfil de Google, Apple Maps, Bing, Yelp, citaciones, contenido, enlaces, búsqueda con IA y qué medir cada mes.</span>
-      <span data-l="en">Everything we do for clients, explained in full and for free: website, design that converts, the Google profile, Apple Maps, Bing, Yelp, citations, content, links, AI search, and what to measure each month.</span></p>
-    <div class="btnrow" style="margin-top:1.8rem">
-      {wa("Hola MAPA, leí su guía y prefiero que ustedes lo hagan. Mi negocio es ___ en ___.",
-          "Hi MAPA, I read your guide and I'd rather you did it. My business is ___ in ___.",
-          "Que lo hagan ustedes", "Have you do it")}
-      <a class="btn btn--ghost" href="herramientas.html"><span data-l="es">Ver las herramientas</span><span data-l="en">See the tools</span></a>
-    </div>
-  </div>
-</section>
-
-<section class="sec">
-  <div class="wrap guide">
-    <aside class="toc">
-      <p class="legend"><span data-l="es">Capítulos</span><span data-l="en">Chapters</span></p>
-      <ol>{toc}</ol>
-    </aside>
-    <div>{chapters}</div>
+</div>
   </div>
 </section>
 
@@ -832,14 +809,68 @@ body = f'''<div class="progress" aria-hidden="true"></div>
           <span data-l="en">Now it's ten to fifteen hours a month. Every month.</span></h2>
       <p><span data-l="es">Si las tienes, hazlo tú: aquí está todo lo que necesitas y no te vamos a esconder nada. Si prefieres estar arriba de un techo y no frente a una pantalla, escríbenos.</span>
          <span data-l="en">If you have them, do it yourself: everything you need is here and we're not hiding anything. If you'd rather be on a roof than in front of a screen, message us.</span></p>
-      {wa("Hola MAPA, leí la guía completa. Mi negocio es ___ y trabajo en ___. ¿Por dónde empezamos?",
-          "Hi MAPA, I read the whole guide. My business is ___ and I work in ___. Where do we start?",
-          "Escribir por WhatsApp", "Message on WhatsApp")}
+      <a class="btn btn--wa wa" href="https://wa.me/527711150327" data-msg-es="Hola MAPA, leí la guía completa. Mi negocio es ___ y trabajo en ___. ¿Por dónde empezamos?" data-msg-en="Hi MAPA, I read the whole guide. My business is ___ and I work in ___. Where do we start?"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.16c-.24.68-1.42 1.3-1.96 1.35-.5.05-1.14.07-1.83-.11-.42-.13-.96-.31-1.66-.61-2.92-1.26-4.83-4.2-4.98-4.4-.14-.2-1.19-1.58-1.19-3.01 0-1.43.75-2.13 1.02-2.42.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.66.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.2-.15.32-.29.49-.15.17-.31.38-.44.51-.15.14-.3.3-.13.59.17.29.75 1.24 1.61 2.01 1.11.99 2.04 1.3 2.33 1.44.29.15.46.12.63-.07.17-.2.73-.85.92-1.14.2-.29.39-.24.66-.15.27.1 1.69.8 1.98.94.29.15.48.22.55.34.07.12.07.7-.17 1.38z"/></svg><span data-l="es">Escribir por WhatsApp</span><span data-l="en">Message on WhatsApp</span></a>
     </div></div>
   </div>
-</section>'''
+</section>
+</main>
 
-page("guia.html",
-     "Guía de marketing local para negocios de servicio | MAPA Marketing",
-     "Guía completa y gratuita en español: sitio web, SEO local, Perfil de Negocio de Google, Apple Maps, Bing Places, Yelp, citaciones NAP, contenido, enlaces locales y búsqueda con IA.",
-     body)
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div class="foot__brand">
+        <a class="brand" href="index.html">
+          <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect width="40" height="40" rx="6" fill="#12303F"/>
+            <path d="M7 14h26M7 26h26M14 7v26M26 7v26" stroke="#EFF1EC" stroke-opacity=".18" stroke-width="1"/>
+            <path d="M20 9.5c-4.2 0-7.6 3.3-7.6 7.4 0 5.6 7.6 13.1 7.6 13.1s7.6-7.5 7.6-13.1c0-4.1-3.4-7.4-7.6-7.4z" fill="#25D366"/>
+            <circle cx="20" cy="16.9" r="2.9" fill="#12303F"/>
+          </svg>
+          <span class="brand__txt"><span class="brand__name">MAPA</span><span class="brand__sub">MARKETING</span></span>
+        </a>
+        <p class="foot__p">
+          <span data-l="es">Sitios web y posicionamiento local para negocios de servicio latinos en Estados Unidos.</span>
+          <span data-l="en">Websites and local ranking for Latino-owned service businesses in the United States.</span>
+        </p>
+        <a class="btn btn--wa btn--sm wa" href="https://wa.me/527711150327"
+           data-msg-es="Hola MAPA, quiero información."
+           data-msg-en="Hi MAPA, I'd like some information.">WhatsApp</a>
+      </div>
+      <div>
+        <h4><span data-l="es">Sitio</span><span data-l="en">Site</span></h4>
+        <ul>
+          <li><a href="servicios.html"><span data-l="es">Servicios</span><span data-l="en">Services</span></a></li>
+          <li><a href="proceso.html"><span data-l="es">Proceso</span><span data-l="en">Process</span></a></li>
+          <li><a href="guia.html"><span data-l="es">Guía completa</span><span data-l="en">Full guide</span></a></li>
+          <li><a href="herramientas.html"><span data-l="es">Herramientas</span><span data-l="en">Tools</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span data-l="es">Herramientas</span><span data-l="en">Tools</span></h4>
+        <ul>
+          <li><a href="diagnostico.html"><span data-l="es">Diagnóstico de visibilidad</span><span data-l="en">Visibility check</span></a></li>
+          <li><a href="calculadora.html"><span data-l="es">Valor de un cliente</span><span data-l="en">Customer value</span></a></li>
+          <li><a href="publicaciones.html"><span data-l="es">Publicaciones de Google</span><span data-l="en">Google posts</span></a></li>
+          <li><a href="resenas.html"><span data-l="es">Respuestas a reseñas</span><span data-l="en">Review replies</span></a></li>
+          <li><a href="citaciones.html"><span data-l="es">Citaciones y NAP</span><span data-l="en">Citations & NAP</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__bot">
+      <span>© <span data-year>2026</span> MAPA MARKETING</span>
+      <span data-l="es">CONTACTO ÚNICAMENTE POR WHATSAPP</span><span data-l="en">CONTACT BY WHATSAPP ONLY</span>
+      <span data-l="es">NEGOCIOS EN EE.UU.</span><span data-l="en">US BUSINESSES</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wafloat wa" href="https://wa.me/527711150327"
+   data-msg-es="Hola MAPA, quiero más clientes para mi negocio."
+   data-msg-en="Hi MAPA, I want more customers for my business.">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.16c-.24.68-1.42 1.3-1.96 1.35-.5.05-1.14.07-1.83-.11-.42-.13-.96-.31-1.66-.61-2.92-1.26-4.83-4.2-4.98-4.4-.14-.2-1.19-1.58-1.19-3.01 0-1.43.75-2.13 1.02-2.42.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.66.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.2-.15.32-.29.49-.15.17-.31.38-.44.51-.15.14-.3.3-.13.59.17.29.75 1.24 1.61 2.01 1.11.99 2.04 1.3 2.33 1.44.29.15.46.12.63-.07.17-.2.73-.85.92-1.14.2-.29.39-.24.66-.15.27.1 1.69.8 1.98.94.29.15.48.22.55.34.07.12.07.7-.17 1.38z"/></svg>
+  <span data-l="es">Escríbenos</span><span data-l="en">Message us</span>
+</a>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

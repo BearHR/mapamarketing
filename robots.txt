@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Cambia esta línea por tu dominio real cuando lo tengas conectado:
-Sitemap: https://TU-DOMINIO.com/sitemap.xml
+Sitemap: https://bearhr.github.io/mapamarketing/sitemap.xml

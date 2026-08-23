@@ -1,7 +1,9 @@
 import re, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-IDX = (ROOT / "index.html").read_text(encoding="utf-8")
+SRC = ROOT / "_src"
+SRC.mkdir(exist_ok=True)
+IDX = (SRC / "index.html").read_text(encoding="utf-8")
 
 def between(start, end, s=IDX):
     i = s.index(start); j = s.index(end, i)
@@ -51,5 +53,5 @@ def page(fn, title, desc, body, extrahead="", extrascript=""):
     html = HEAD.format(title=title, desc=desc, extrahead=extrahead)
     html += SKIP + "\n\n" + NAV + "\n\n<main id=\"main\">\n" + body + "\n</main>\n\n" + FOOT + "\n\n" + FLOAT + "\n"
     html += '<script src="assets/js/main.js"></script>\n' + extrascript + "</body>\n</html>\n"
-    (ROOT / fn).write_text(html, encoding="utf-8")
+    (SRC / fn).write_text(html, encoding="utf-8")
     print("wrote", fn, len(html))

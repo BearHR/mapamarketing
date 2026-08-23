@@ -30,7 +30,8 @@
     var lang = document.documentElement.getAttribute('data-lang') || 'es';
     var city = (MAPA.store.get('mapa_city') || '').trim();
     document.querySelectorAll('a.wa').forEach(function (a) {
-      var msg = a.getAttribute('data-msg-' + lang) || a.getAttribute('data-msg-es') || '';
+      var msg = a.getAttribute('data-msg-' + lang) || a.getAttribute('data-msg') ||
+                a.getAttribute('data-msg-es') || '';
       if (city && msg) {
         msg += (lang === 'en' ? ' My business is in ' : ' Mi negocio está en ') + city + '.';
       }
@@ -40,38 +41,12 @@
     });
   };
 
-  /* ---------- Idioma ---------- */
-  function setLang(lang, remember) {
-    lang = lang === 'en' ? 'en' : 'es';
-    var html = document.documentElement;
-    html.setAttribute('data-lang', lang);
-    html.setAttribute('lang', lang === 'en' ? 'en' : 'es');
-    if (remember !== false) MAPA.store.set('mapa_lang', lang);
-
-    document.querySelectorAll('[data-lang-btn]').forEach(function (b) {
-      b.setAttribute('aria-pressed', String(b.getAttribute('data-lang-btn') === lang));
-    });
-    /* Atributos que no son texto visible */
-    document.querySelectorAll('[data-ph-es]').forEach(function (el) {
-      el.setAttribute('placeholder', el.getAttribute('data-ph-' + lang) || '');
-    });
-    document.querySelectorAll('[data-al-es]').forEach(function (el) {
-      el.setAttribute('aria-label', el.getAttribute('data-al-' + lang) || '');
-    });
-    MAPA.refreshWA();
-    document.dispatchEvent(new CustomEvent('mapa:lang', { detail: { lang: lang } }));
-  }
-  MAPA.setLang = setLang;
+  /* ---------- Idioma ----------
+     Cada idioma tiene su propia URL (/ y /en/). El documento ya viene con el
+     idioma correcto, así que aquí sólo lo leemos. */
   MAPA.lang = function () { return document.documentElement.getAttribute('data-lang') || 'es'; };
   MAPA.t = function (es, en) { return MAPA.lang() === 'en' ? en : es; };
-
-  var urlLang = new URLSearchParams(location.search).get('lang');
-  setLang(urlLang || MAPA.store.get('mapa_lang') || 'es', !!urlLang);
-
-  document.addEventListener('click', function (e) {
-    var b = e.target.closest('[data-lang-btn]');
-    if (b) { setLang(b.getAttribute('data-lang-btn')); }
-  });
+  MAPA.refreshWA();
 
   /* ---------- Navegación móvil ---------- */
   var burger = document.querySelector('.burger');

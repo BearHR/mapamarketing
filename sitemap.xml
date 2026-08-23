@@ -1,14 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Reemplaza https://TU-DOMINIO.com por tu dominio real antes de enviarlo a Google Search Console -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://TU-DOMINIO.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://TU-DOMINIO.com/servicios.html</loc><priority>0.9</priority></url>
-  <url><loc>https://TU-DOMINIO.com/proceso.html</loc><priority>0.8</priority></url>
-  <url><loc>https://TU-DOMINIO.com/guia.html</loc><priority>0.9</priority></url>
-  <url><loc>https://TU-DOMINIO.com/herramientas.html</loc><priority>0.8</priority></url>
-  <url><loc>https://TU-DOMINIO.com/diagnostico.html</loc><priority>0.7</priority></url>
-  <url><loc>https://TU-DOMINIO.com/calculadora.html</loc><priority>0.7</priority></url>
-  <url><loc>https://TU-DOMINIO.com/publicaciones.html</loc><priority>0.7</priority></url>
-  <url><loc>https://TU-DOMINIO.com/resenas.html</loc><priority>0.7</priority></url>
-  <url><loc>https://TU-DOMINIO.com/citaciones.html</loc><priority>0.7</priority></url>
+<!-- Generado por _build/split.py. Cambia SITE en ese archivo al conectar tu dominio. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://bearhr.github.io/mapamarketing/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bearhr.github.io/mapamarketing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bearhr.github.io/mapamarketing/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bearhr.github.io/mapamarketing/"/>
+  </url>
+  <url>
+    <loc>https://bearhr.github.io/mapamarketing/en/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bearhr.github.io/mapamarketing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bearhr.github.io/mapamarketing/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bearhr.github.io/mapamarketing/"/>
+  </url>
+  <url>
+    <loc>https://bearhr.github.io/mapamarketing/servicios.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bearhr.github.io/mapamarketing/servicios.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bearhr.github.io/mapamarketing/en/servicios.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bearhr.github.io/mapamarketing/servicios.html"/>
+  </url>
+  <url>
+    <loc>https://bearhr.github.io/mapamarketing/en/servicios.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bearhr.github.io/mapamarketing/servicios.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bearhr.github.io/mapamarketing/en/servicios.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bearhr.github.io/mapamarketing/servicios.html"/>
+  </url>
+  <url>
+    <loc>https://bearhr.github.io/mapamarketing/proceso.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bearhr.github.io/mapamarketing/proceso.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bearhr.github.io/mapamarketing/en/proceso.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bearhr.github.io/mapamarketing/proceso.html"/>
+  </url>
+  <url>
+    <loc>https://bearhr.github.io/mapamarketing/en/proceso.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bearhr.github.io/mapamarketing/proceso.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bearhr.github.io/mapamarketing/en/proceso.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bearhr.github.io/mapamarketing/proceso.html"/>
+  </url>
+  <url>
+    <loc>https://bearhr.github.io/mapamarketing/guia.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bearhr.github.io/mapamarketing/guia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bearhr.github.io/mapamarketing/en/guia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bearhr.github.io/mapamarketing/guia.html"/>
+  </url>
+  <url>
+    <loc>https://bearhr.github.io/mapamarketing/en/guia.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bearhr.github.io/mapamarketing/guia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bearhr.github.io/mapamarketing/en/guia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bearhr.github.io/mapamarketing/guia.html"/>
+  </url>
+  <url>
+    <loc>https://bearhr.github.io/mapamarketing/herramientas.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bearhr.github.io/mapamarketing/herramientas.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bearhr.github.io/mapamarketing/en/herramientas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bearhr.github.io/mapamarketing/herramientas.html"/>
+  </url>
+  <url>
+    <loc>https://bearhr.github.io/mapamarketing/en/herramientas.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bearhr.github.io/mapamarketing/herramientas.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bearhr.github.io/mapamarketing/en/herramientas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bearhr.github.io/mapamarketing/herramientas.html"/>
+  </url>
+  <url>
+    <loc>https://bearhr.github.io/mapamarketing/diagnostico.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bearhr.github.io/mapamarketing/diagnostico.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bearhr.github.io/mapamarketing/en/diagnostico.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bearhr.github.io/mapamarketing/diagnostico.html"/>
+  </url>
+  <url>
+    <loc>https://bearhr.github.io/mapamarketing/en/diagnostico.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bearhr.github.io/mapamarketing/diagnostico.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bearhr.github.io/mapamarketing/en/diagnostico.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bearhr.github.io/mapamarketing/diagnostico.html"/>
+  </url>
+  <url>
+    <loc>https://bearhr.github.io/mapamarketing/calculadora.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bearhr.github.io/mapamarketing/calculadora.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bearhr.github.io/mapamarketing/en/calculadora.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bearhr.github.io/mapamarketing/calculadora.html"/>
+  </url>
+  <url>
+    <loc>https://bearhr.github.io/mapamarketing/en/calculadora.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bearhr.github.io/mapamarketing/calculadora.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bearhr.github.io/mapamarketing/en/calculadora.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bearhr.github.io/mapamarketing/calculadora.html"/>
+  </url>
+  <url>
+    <loc>https://bearhr.github.io/mapamarketing/publicaciones.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bearhr.github.io/mapamarketing/publicaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bearhr.github.io/mapamarketing/en/publicaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bearhr.github.io/mapamarketing/publicaciones.html"/>
+  </url>
+  <url>
+    <loc>https://bearhr.github.io/mapamarketing/en/publicaciones.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bearhr.github.io/mapamarketing/publicaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bearhr.github.io/mapamarketing/en/publicaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bearhr.github.io/mapamarketing/publicaciones.html"/>
+  </url>
+  <url>
+    <loc>https://bearhr.github.io/mapamarketing/resenas.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bearhr.github.io/mapamarketing/resenas.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bearhr.github.io/mapamarketing/en/resenas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bearhr.github.io/mapamarketing/resenas.html"/>
+  </url>
+  <url>
+    <loc>https://bearhr.github.io/mapamarketing/en/resenas.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bearhr.github.io/mapamarketing/resenas.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bearhr.github.io/mapamarketing/en/resenas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bearhr.github.io/mapamarketing/resenas.html"/>
+  </url>
+  <url>
+    <loc>https://bearhr.github.io/mapamarketing/citaciones.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bearhr.github.io/mapamarketing/citaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bearhr.github.io/mapamarketing/en/citaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bearhr.github.io/mapamarketing/citaciones.html"/>
+  </url>
+  <url>
+    <loc>https://bearhr.github.io/mapamarketing/en/citaciones.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bearhr.github.io/mapamarketing/citaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bearhr.github.io/mapamarketing/en/citaciones.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bearhr.github.io/mapamarketing/citaciones.html"/>
+  </url>
 </urlset>

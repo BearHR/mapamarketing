@@ -26,10 +26,10 @@ BACK = '''<section class="sec sec--tight tint">
 
 # ---------------------------------------------------------------- 01
 diag = thero("Herramienta 01", "Tool 01",
-  "¿Qué tan visible eres en tu ciudad?",
-  "How visible are you in your city?",
-  "Dieciocho preguntas de sí o no. Al final tienes una calificación sobre 100, el desglose por área y los seis arreglos que más te van a mover. Nada se guarda ni se manda a nadie.",
-  "Eighteen yes-or-no questions. At the end you get a score out of 100, a breakdown by area, and the six fixes that will move you most. Nothing is stored or sent anywhere.") + '''
+  "Diagnóstico de visibilidad local, gratis",
+  "Free local visibility check",
+  "¿Qué tan visible eres hoy en tu ciudad? Dieciocho preguntas de sí o no y, al final, una calificación sobre 100, el desglose por área y los seis arreglos que más te van a mover. Nada se guarda ni se manda a nadie.",
+  "How visible are you in your city right now? Eighteen yes-or-no questions and, at the end, a score out of 100, a breakdown by area, and the six fixes that will move you most. Nothing is stored or sent anywhere.") + '''
 
 <section class="sec">
   <div class="wrap" style="max-width:900px">
@@ -50,11 +50,11 @@ diag = thero("Herramienta 01", "Tool 01",
       <div class="bar"><div class="bar__f" id="auditBar"></div></div>
       <p id="auditVerdict" style="font-size:1.05rem"></p>
 
-      <h3 style="margin-top:2rem;font-size:1.1rem"><span data-l="es">Por área</span><span data-l="en">By area</span></h3>
+      <h2 style="margin-top:2rem;font-size:1.1rem"><span data-l="es">Por área</span><span data-l="en">By area</span></h2>
       <div class="brk" id="auditBreak"></div>
 
       <div id="auditFixWrap">
-        <h3 style="font-size:1.1rem"><span data-l="es">Arregla esto primero, en este orden</span><span data-l="en">Fix these first, in this order</span></h3>
+        <h2 style="font-size:1.1rem"><span data-l="es">Arregla esto primero, en este orden</span><span data-l="en">Fix these first, in this order</span></h2>
         <ul class="todo" id="auditFixes"></ul>
       </div>
 
@@ -80,9 +80,9 @@ page("diagnostico.html",
 
 # ---------------------------------------------------------------- 02
 calc = thero("Herramienta 02", "Tool 02",
-  "¿Cuánto vale realmente un cliente nuevo?",
-  "What is a new customer actually worth?",
-  "La mayoría de los dueños subestima esta cifra, y por eso les parece caro invertir en que los encuentren. Pon tus números y mira lo que representan tres contactos más al mes.",
+  "Calculadora: cuánto vale un cliente nuevo",
+  "Calculator: what a new customer is worth",
+  "Casi todos los dueños se quedan cortos con esta cifra, y por eso les parece caro invertir en que los encuentren. Pon tus números y mira lo que significan tres contactos más al mes.",
   "Most owners underestimate this number, which is why getting found feels expensive. Put in your numbers and see what three extra leads a month actually mean.") + '''
 
 <section class="sec">
@@ -120,7 +120,7 @@ calc = thero("Herramienta 02", "Tool 02",
         <b id="cNow">$0</b>
         <span data-l="es"> al mes.</span><span data-l="en"> per month.</span>
       </p>
-      <h3 style="margin-top:1.8rem;font-size:1.1rem"><span data-l="es">Lo que valdrían más contactos</span><span data-l="en">What extra leads would be worth</span></h3>
+      <h2 style="margin-top:1.8rem;font-size:1.1rem"><span data-l="es">Lo que valdrían más contactos</span><span data-l="en">What extra leads would be worth</span></h2>
       <div class="money" id="cOut"></div>
       <p style="font-size:.9rem;color:var(--muted);margin-bottom:1.4rem">
         <span data-l="es">Esto es una estimación con tus propios números, no una promesa de resultados. Sirve para una cosa: decidir si vale la pena que te encuentren.</span>
@@ -144,10 +144,10 @@ page("calculadora.html",
 
 # ---------------------------------------------------------------- 03
 posts = thero("Herramienta 03", "Tool 03",
-  "Las cuatro publicaciones del mes, en un minuto",
-  "This month's four posts, in one minute",
-  "Google premia los perfiles activos. Cuatro publicaciones al mes es el ritmo mínimo razonable, y esta herramienta te las escribe: una de servicio, una de consejo, una de trabajo reciente y una de oferta o urgencia.",
-  "Google rewards active profiles. Four posts a month is the minimum sensible rhythm, and this writes them for you: one service post, one tip, one recent job, and one offer or urgency post.") + '''
+  "Generador de publicaciones para el Perfil de Negocio de Google",
+  "Google Business Profile post generator",
+  "Google le da preferencia a los perfiles activos, y una publicación por semana es un ritmo razonable. Esta herramienta te escribe las del mes en un minuto: una de servicio, una de consejo, una de trabajo reciente y una de oferta o urgencia.",
+  "Google favours profiles that stay active, and one post a week is a sensible rhythm. This writes the month's worth in a minute: one service post, one tip, one recent job, and one offer or urgency post.") + '''
 
 <section class="sec">
   <div class="wrap" style="max-width:800px">
@@ -197,9 +197,9 @@ page("publicaciones.html",
 
 # ---------------------------------------------------------------- 04
 rev = thero("Herramienta 04", "Tool 04",
-  "Qué contestar a una reseña",
-  "What to say to a review",
-  "La respuesta no es para quien la escribió: es para los cincuenta que la van a leer antes de decidir a quién llamar. Aquí tienes tres formas de contestar según las estrellas.",
+  "Generador de respuestas a reseñas de Google y Yelp",
+  "Google and Yelp review reply generator",
+  "La respuesta no es para quien escribió la reseña: es para los cincuenta que la van a leer antes de decidir a quién llamarle. Aquí tienes tres formas de contestar según las estrellas.",
   "The reply isn't for the person who wrote it: it's for the fifty people who'll read it before deciding who to call. Here are three ways to answer depending on the stars.") + '''
 
 <section class="sec">
@@ -268,9 +268,9 @@ def fld(i, es, en, ph="", t="text"):
 </div>'''
 
 cit = thero("Herramienta 05", "Tool 05",
-  "Un solo formato de datos. En todos lados.",
-  "One data format. Everywhere.",
-  "Si tu teléfono aparece de tres maneras distintas en internet, Google no sabe cuál eres tú. Aquí armas tu bloque oficial y llevas el control de los treinta directorios donde deberías estar.",
+  "Citaciones locales y datos NAP: 30 directorios",
+  "Local citations and NAP data: 30 directories",
+  "Si tu teléfono aparece de tres maneras distintas en internet, Google deja de saber cuál eres tú. Aquí armas tu bloque oficial de datos y llevas el control de los treinta directorios donde deberías estar.",
   "If your phone number appears three different ways online, Google doesn't know which one is you. Build your official block here and track the thirty directories you should be listed in.") + '''
 
 <section class="sec">
@@ -295,7 +295,7 @@ cit = thero("Herramienta 05", "Tool 05",
     </div>
 
     <div class="out" id="napBox" hidden style="margin-top:1.2rem">
-      <h4><span data-l="es">Copia esto y pégalo igual en cada directorio</span><span data-l="en">Copy this and paste it identically into every directory</span></h4>
+      <p class="out__k"><span data-l="es">Copia esto y pégalo igual en cada directorio</span><span data-l="en">Copy this and paste it identically into every directory</span></p>
       <button class="copy" type="button">COPY</button>
       <p id="napOut" data-copy></p>
     </div>

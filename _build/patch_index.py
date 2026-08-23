@@ -2,7 +2,7 @@
 """Aplica las correcciones pedidas a index.html."""
 import pathlib, sys
 
-p = pathlib.Path('/home/claude/mapa/index.html')
+p = pathlib.Path('/home/claude/mapa/_src/index.html')
 s = p.read_text(encoding='utf-8')
 n = 0
 

@@ -397,7 +397,7 @@
       posts.forEach(function (p) {
         var d = document.createElement('div');
         d.className = 'out';
-        d.innerHTML = '<h4>' + p.k + '</h4>' +
+        d.innerHTML = '<p class="out__k">' + p.k + '</p>' +
           '<button class="copy" type="button">' + T('COPIAR', 'COPY') + '</button>' +
           '<p data-copy><strong>' + p.h + '</strong>\n\n' + p.b + '</p>';
         box.appendChild(d);
@@ -461,7 +461,7 @@
       out.forEach(function (o) {
         var d = document.createElement('div');
         d.className = 'out';
-        d.innerHTML = '<h4>' + o.k + '</h4><button class="copy" type="button">' + T('COPIAR', 'COPY') + '</button><p data-copy>' + o.t + '</p>';
+        d.innerHTML = '<p class="out__k">' + o.k + '</p><button class="copy" type="button">' + T('COPIAR', 'COPY') + '</button><p data-copy>' + o.t + '</p>';
         box.appendChild(d);
       });
       $('#rResult', root).hidden = false;
