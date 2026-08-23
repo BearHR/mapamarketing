@@ -101,7 +101,7 @@
     var paint = function () {
       var v = cityInput.value.trim();
       MAPA.store.set('mapa_city', v);
-      if (label) label.textContent = (v ? v.toUpperCase().slice(0, 22) : MAPA.t('TU CIUDAD', 'YOUR CITY'));
+      if (label) label.textContent = (v ? v.toUpperCase().slice(0, 16) : MAPA.t('TU CIUDAD', 'YOUR CITY'));
       MAPA.refreshWA();
     };
     cityInput.addEventListener('input', paint);

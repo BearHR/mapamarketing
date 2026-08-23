@@ -74,82 +74,112 @@ ch("c1", "Cómo te encuentran hoy tus clientes", "How your customers find you to
 ch("c2", "La estructura de tu sitio", "Your site's structure",
 """
 <p>El error más caro que comete un negocio de servicio con su sitio web es tener una sola página llamada “Servicios” con una lista de todo lo que hace. Se siente ordenado. Y es la razón número uno por la que no aparece en búsquedas.</p>
+<p>El segundo error más caro es el arreglo que casi todos intentan después: hacer una página por servicio y aparte una página por ciudad. Suena lógico y no funciona.</p>
 
-<h3>Una página, una intención</h3>
-<p>Google manda a la gente a páginas, no a sitios. Si alguien busca “drain cleaning Katy TX”, Google busca una página que trate de destapar drenajes en Katy. Una página que dice “ofrecemos plomería general, destapes, calentadores, tuberías y remodelación de baños” no trata de nada en específico, así que no gana ninguna búsqueda.</p>
-<p>La regla es simple: <b>una página por cada servicio que quieras vender, y una página por cada ciudad donde de verdad trabajas.</b></p>
+<h3>La gente no busca un servicio. Busca un servicio en un lugar</h3>
+<p>Nadie escribe “destape de drenajes”. Escribe <span class="mono">destape de drenajes en Katy</span>. Y Google manda a la gente a páginas, no a sitios: busca una página que trate exactamente de destapar drenajes en Katy.</p>
+<p>Si tienes una página de “destape de drenajes” (que no menciona ninguna ciudad en concreto) y otra de “Katy” (que habla de los seis servicios que ofreces ahí), ninguna de las dos coincide del todo con lo que la persona escribió. Compites a medias en dos frentes en vez de ganar en uno.</p>
+<p>La regla real es esta: <b>una página por cada servicio en cada ciudad.</b> Servicios × ciudades. Ese es tu mapa de páginas.</p>
 
-<h3>Cómo se ve una estructura sana</h3>
+<h3>Cómo se ve una estructura que sí gana</h3>
 <pre style="background:var(--paper-2);border:1px solid var(--rule);border-radius:4px;padding:1rem;overflow:auto;font-family:var(--mono);font-size:.8rem;line-height:1.7">Inicio
-├── Servicios
-│   ├── Reparación de fugas
-│   ├── Destape de drenajes
-│   ├── Calentadores de agua
-│   └── Remodelación de baño
-├── Áreas
-│   ├── Houston
-│   ├── Katy
-│   └── Sugar Land
+├── Servicios  (índice, solo para navegar)
+│   ├── Destape de drenajes en Houston
+│   ├── Destape de drenajes en Katy
+│   ├── Destape de drenajes en Sugar Land
+│   ├── Reparación de fugas en Houston
+│   ├── Reparación de fugas en Katy
+│   ├── Reparación de fugas en Sugar Land
+│   ├── Calentadores de agua en Houston
+│   └── … y así con cada combinación
+├── Área de servicio  (mapa general, enlaza a todas)
 ├── Nosotros
 ├── Reseñas
 └── Blog</pre>
-<p>Con seis servicios y tres ciudades ya son nueve páginas que pueden competir, en vez de una que no compite en nada. Y si un servicio es el que más dinero deja, esa página se trabaja el doble.</p>
+<p>La página de “Servicios” y la de “Área de servicio” siguen existiendo, pero cambian de trabajo: ya no intentan posicionar, solo organizan y enlazan hacia las que sí posicionan.</p>
 
-<h3>Las páginas de ciudad: hazlas bien o no las hagas</h3>
-<p>La tentación es copiar la página de Houston, cambiar “Houston” por “Katy” y publicar. Eso se llama contenido duplicado y Google lo detecta sin esfuerzo. Peor: no convence a nadie.</p>
-<p>Una página de ciudad que sirve incluye cosas que solo pueden estar ahí:</p>
+<h3>Haz la cuenta antes de emocionarte</h3>
+<p>Seis servicios en tres ciudades son dieciocho páginas. Ocho servicios en cinco ciudades son cuarenta. Eso es mucho trabajo si cada página tiene que ser buena, y tienen que ser buenas.</p>
+<p>Por eso el orden importa más que el volumen:</p>
+<ol>
+  <li>Empieza por el servicio que más dinero te deja, en la ciudad donde más trabajas. Esa página se hace excelente.</li>
+  <li>Luego el mismo servicio en tu segunda y tercera ciudad.</li>
+  <li>Luego tu segundo servicio más rentable, en las mismas ciudades.</li>
+  <li>Los servicios que casi no vendes pueden esperar, o quedarse dentro del índice sin página propia.</li>
+</ol>
+<p>Cinco páginas de servicio y ciudad bien hechas valen más que cuarenta plantillas rellenadas.</p>
+
+<h3>El peligro obvio: copiar y cambiar el nombre</h3>
+<p>La tentación es escribir “destape de drenajes en Houston”, duplicarla y cambiar Houston por Katy. Eso es contenido duplicado, Google lo detecta sin esfuerzo, y lo que es peor: no convence a nadie que la lea.</p>
+<p>Una página de servicio y ciudad que sirve tiene cosas que solo pueden estar en ella:</p>
 <ul>
   <li>En cuánto tiempo llegas a esa zona y desde dónde sales.</li>
-  <li>Problemas típicos de esa área (casas viejas con tubería de hierro, colonias nuevas con presión baja, zonas donde el agua es dura).</li>
-  <li>Trabajos que hiciste ahí, con foto.</li>
+  <li>Problemas típicos de ahí (casas viejas con tubería de hierro, colonias nuevas con presión baja, agua dura, suelo que se mueve).</li>
+  <li>Trabajos de ese servicio hechos en esa ciudad, con foto.</li>
   <li>Reseñas de clientes de esa ciudad.</li>
-  <li>Colonias o puntos de referencia que la gente de ahí reconoce.</li>
+  <li>Colonias y puntos de referencia que la gente de ahí reconoce.</li>
+  <li>Precios o rangos, si aplican distinto por zona.</li>
 </ul>
-<p>Si no puedes escribir eso de una ciudad, probablemente no deberías tener una página de esa ciudad todavía.</p>
+<p>Si no puedes escribir eso sobre una combinación, todavía no deberías tener esa página.</p>
 
-<h3>Cuántas páginas y en qué orden</h3>
-<p>No hagas cuarenta páginas el primer mes. Empieza por el servicio que más dinero te deja en la ciudad donde más trabajas, y hazla excelente. Luego la segunda. Cinco páginas buenas valen más que treinta a medias.</p>
-""" + take("Una página por servicio y una por ciudad, cada una con contenido propio. La página genérica de “Servicios” no compite por nada.",
-            "One page per service and one per city, each with its own content. A generic “Services” page competes for nothing."),
+<h3>Cómo se enlazan entre ellas</h3>
+<p>Cada página de servicio y ciudad debe enlazar hacia el índice de servicios, hacia el mismo servicio en las ciudades vecinas, y hacia los otros servicios que ofreces en esa misma ciudad. Así una persona que llegó buscando una fuga en Katy encuentra fácil que también cambias calentadores en Katy.</p>
+""" + take("Una página por cada servicio en cada ciudad, no una de servicios y otra de ciudades. Empieza por la combinación que más dinero te deja y hazla de verdad, no copiando.",
+            "One page for each service in each city, not one services page plus one city page. Start with the combination that makes you the most money and write it properly, not by copying."),
 """
 <p>The most expensive mistake a service business makes with its website is having one page called “Services” with a list of everything it does. It feels tidy. And it's the number one reason the site doesn't show up in search.</p>
+<p>The second most expensive mistake is the fix almost everyone attempts next: one page per service, plus separate pages per city. It sounds logical and it doesn't work.</p>
 
-<h3>One page, one intent</h3>
-<p>Google sends people to pages, not to sites. If someone searches “drain cleaning Katy TX”, Google looks for a page about drain cleaning in Katy. A page saying “we offer general plumbing, drain cleaning, water heaters, repiping and bathroom remodels” is about nothing in particular, so it wins no search.</p>
-<p>The rule is simple: <b>one page for each service you want to sell, and one page for each city you genuinely work in.</b></p>
+<h3>People don't search for a service. They search for a service in a place</h3>
+<p>Nobody types “drain cleaning”. They type <span class="mono">drain cleaning in Katy</span>. And Google sends people to pages, not sites: it looks for a page about drain cleaning in Katy specifically.</p>
+<p>If you have a “drain cleaning” page (that names no particular city) and a “Katy” page (that covers all six services you offer there), neither one fully matches what the person typed. You compete halfway on two fronts instead of winning on one.</p>
+<p>The real rule is this: <b>one page for each service in each city.</b> Services × cities. That's your page map.</p>
 
-<h3>What a healthy structure looks like</h3>
+<h3>What a structure that actually wins looks like</h3>
 <pre style="background:var(--paper-2);border:1px solid var(--rule);border-radius:4px;padding:1rem;overflow:auto;font-family:var(--mono);font-size:.8rem;line-height:1.7">Home
-├── Services
-│   ├── Leak repair
-│   ├── Drain cleaning
-│   ├── Water heaters
-│   └── Bathroom remodel
-├── Areas
-│   ├── Houston
-│   ├── Katy
-│   └── Sugar Land
+├── Services  (index, for navigation only)
+│   ├── Drain cleaning in Houston
+│   ├── Drain cleaning in Katy
+│   ├── Drain cleaning in Sugar Land
+│   ├── Leak repair in Houston
+│   ├── Leak repair in Katy
+│   ├── Leak repair in Sugar Land
+│   ├── Water heaters in Houston
+│   └── … and so on for each combination
+├── Service area  (overview map, links to all)
 ├── About
 ├── Reviews
 └── Blog</pre>
-<p>Six services and three cities gives you nine pages that can compete, instead of one that competes for nothing. And if one service brings the most money, that page gets twice the work.</p>
+<p>The “Services” and “Service area” pages still exist, but their job changes: they're no longer trying to rank, just to organize and link through to the ones that do.</p>
 
-<h3>City pages: do them properly or don't do them</h3>
-<p>The temptation is to copy the Houston page, swap “Houston” for “Katy”, and publish. That's duplicate content and Google spots it without effort. Worse: it convinces nobody.</p>
-<p>A city page that works includes things that could only be there:</p>
+<h3>Do the math before you get excited</h3>
+<p>Six services across three cities is eighteen pages. Eight services across five cities is forty. That's a lot of work if every page has to be good, and they do have to be good.</p>
+<p>Which is why order matters more than volume:</p>
+<ol>
+  <li>Start with the service that makes you the most money, in the city you work most. Make that page excellent.</li>
+  <li>Then the same service in your second and third cities.</li>
+  <li>Then your second most profitable service, in the same cities.</li>
+  <li>Services you barely sell can wait, or live inside the index without their own page.</li>
+</ol>
+<p>Five well-built service-and-city pages beat forty filled-in templates.</p>
+
+<h3>The obvious trap: copy and swap the name</h3>
+<p>The temptation is to write “drain cleaning in Houston”, duplicate it, and change Houston to Katy. That's duplicate content, Google spots it without effort, and worse: it convinces nobody who reads it.</p>
+<p>A service-and-city page that works contains things that could only be on that page:</p>
 <ul>
   <li>How long it takes you to reach that area and where you drive from.</li>
-  <li>Problems typical of that area (older homes with cast iron, new subdivisions with low pressure, neighborhoods with hard water).</li>
-  <li>Jobs you've done there, with photos.</li>
+  <li>Problems typical of there (older homes with cast iron, new subdivisions with low pressure, hard water, shifting soil).</li>
+  <li>Jobs of that service done in that city, with photos.</li>
   <li>Reviews from customers in that city.</li>
-  <li>Neighborhoods or landmarks locals recognize.</li>
+  <li>Neighborhoods and landmarks locals recognize.</li>
+  <li>Pricing or ranges, if they differ by area.</li>
 </ul>
-<p>If you can't write that about a city, you probably shouldn't have a page for that city yet.</p>
+<p>If you can't write that about a combination, you shouldn't have that page yet.</p>
 
-<h3>How many pages, in what order</h3>
-<p>Don't build forty pages in month one. Start with the service that makes you the most money in the city you work most, and make it excellent. Then the second. Five good pages beat thirty half-done ones.</p>
-""" + take("One page per service and one per city, each with its own content. The generic “Services” page competes for nothing.",
-            "One page per service and one per city, each with its own content. A generic “Services” page competes for nothing."))
+<h3>How they link to each other</h3>
+<p>Each service-and-city page should link to the services index, to the same service in neighboring cities, and to your other services in that same city. That way someone who arrived looking for a leak in Katy easily discovers you also replace water heaters in Katy.</p>
+""" + take("One page for each service in each city, not one services page plus one city page. Start with the combination that makes you the most money and write it properly, not by copying.",
+            "One page for each service in each city, not one services page plus one city page. Start with the combination that makes you the most money and write it properly, not by copying."))
 
 # ======================================================= 3
 ch("c3", "Diseño que convierte la visita en mensaje", "Design that turns a visit into a message",
@@ -309,7 +339,7 @@ ch("c5", "El Perfil de Negocio de Google, a fondo", "The Google Business Profile
 <p>Sube fotos cada mes, no una vez al año. Fotos reales: el trabajo antes y después, tu gente trabajando, la camioneta, la herramienta, el equipo instalado. Diez o quince al mes es un buen ritmo. Nada de imágenes de banco: se notan y no ayudan.</p>
 
 <h3>Publicaciones</h3>
-<p>Las publicaciones del perfil son cortas, llevan foto y un botón. Cuatro al mes es el mínimo razonable. Sirven para dos cosas: mantener el perfil activo y ocupar más espacio visual cuando alguien te busca por nombre.</p>
+<p>Las publicaciones del perfil son cortas, llevan foto y un botón. Una por semana es un ritmo razonable. Sirven para dos cosas: mantener el perfil activo y ocupar más espacio visual cuando alguien te busca por nombre.</p>
 <p>Qué publicar sin quedarte sin ideas: un servicio con su llamada a la acción, un consejo útil de tu oficio, un trabajo reciente con foto, y una oferta o recordatorio de temporada.</p>
 
 <h3>Reseñas</h3>
@@ -320,8 +350,8 @@ ch("c5", "El Perfil de Negocio de Google, a fondo", "The Google Business Profile
   <li><b>Nunca las compres ni las inventes.</b> Es la forma más rápida de perder el perfil, y se detecta.</li>
 </ul>
 <p>Ante una reseña mala: no discutas los detalles en público, reconoce lo que se pueda reconocer, e invita a seguir la conversación en privado. Una respuesta serena a una reseña de una estrella vende más que diez reseñas de cinco.</p>
-""" + note("Optimizamos el perfil completo (categorías, servicios, atributos, área, horarios), publicamos cuatro veces al mes con foto, y subimos fotos nuevas cada mes.",
-           "We optimize the whole profile (categories, services, attributes, area, hours), post four times a month with photos, and upload new photos monthly.",
+""" + note("Optimizamos el perfil completo (categorías, servicios, atributos, área, horarios), lo mantenemos activo con publicaciones y foto, y subimos fotos nuevas cada mes.",
+           "We optimize the whole profile (categories, services, attributes, area, hours), keep it active with posts and photos, and upload new photos every month.",
            "Hola MAPA, quiero que revisen y optimicen mi Perfil de Negocio de Google.",
            "Hi MAPA, I want you to review and optimize my Google Business Profile."),
 """
@@ -342,7 +372,7 @@ ch("c5", "El Perfil de Negocio de Google, a fondo", "The Google Business Profile
 <p>Upload photos every month, not once a year. Real photos: the job before and after, your crew working, the truck, the tools, the installed equipment. Ten to fifteen a month is a good rhythm. No stock images: they're obvious and they don't help.</p>
 
 <h3>Posts</h3>
-<p>Profile posts are short, carry a photo and a button. Four a month is the reasonable minimum. They do two things: keep the profile active and take up more visual space when someone searches your name.</p>
+<p>Profile posts are short, carry a photo and a button. Once a week is a reasonable rhythm. They do two things: keep the profile active and take up more visual space when someone searches your name.</p>
 <p>What to post without running out of ideas: a service with its call to action, a useful tip from your trade, a recent job with a photo, and a seasonal offer or reminder.</p>
 
 <h3>Reviews</h3>
@@ -353,8 +383,8 @@ ch("c5", "El Perfil de Negocio de Google, a fondo", "The Google Business Profile
   <li><b>Never buy or invent them.</b> It's the fastest way to lose the profile, and it gets caught.</li>
 </ul>
 <p>Facing a bad review: don't argue details in public, acknowledge what can be acknowledged, and invite the conversation to continue privately. A calm reply to a one-star review sells more than ten five-star ones.</p>
-""" + note("We optimize the whole profile (categories, services, attributes, area, hours), post four times a month with photos, and upload new photos monthly.",
-           "We optimize the whole profile (categories, services, attributes, area, hours), post four times a month with photos, and upload new photos monthly.",
+""" + note("We optimize the whole profile (categories, services, attributes, area, hours), keep it active with posts and photos, and upload new photos every month.",
+           "We optimize the whole profile (categories, services, attributes, area, hours), keep it active with posts and photos, and upload new photos every month.",
            "Hola MAPA, quiero que revisen y optimicen mi Perfil de Negocio de Google.",
            "Hi MAPA, I want you to review and optimize my Google Business Profile."))
 
@@ -449,8 +479,8 @@ ch("c7", "Citaciones y datos NAP", "Citations and NAP data",
 
 <h3>Limpiar vale más que dar de alta</h3>
 <p>Muchos negocios ya tienen fichas viejas que ellos nunca crearon, con el teléfono anterior o la dirección de hace tres mudanzas. Buscar esas fichas y corregirlas o pedir que las borren suele mover más la aguja que registrarse en veinte directorios nuevos.</p>
-""" + note("Fijamos tu NAP, construimos citaciones nuevas cada mes y buscamos y corregimos las fichas viejas con datos equivocados.",
-           "We lock your NAP, build new citations every month, and hunt down and correct old listings with wrong data.",
+""" + note("Fijamos tu NAP, construimos tus citaciones durante los primeros meses y buscamos y corregimos las fichas viejas con datos equivocados. Después solo hay que vigilarlas.",
+           "We lock your NAP, build out your citations over the first months, and hunt down and correct old listings with wrong data. After that they just need monitoring.",
            "Hola MAPA, quiero que revisen y arreglen mis citaciones.",
            "Hi MAPA, I want you to review and fix my citations."),
 """
@@ -485,13 +515,13 @@ ch("c7", "Citaciones y datos NAP", "Citations and NAP data",
 
 <h3>Cleaning up beats signing up</h3>
 <p>Many businesses already have old listings they never created, with a previous phone number or an address from three moves ago. Finding those and correcting them or requesting removal usually moves the needle more than registering on twenty new directories.</p>
-""" + note("We lock your NAP, build new citations every month, and hunt down and correct old listings with wrong data.",
-           "We lock your NAP, build new citations every month, and hunt down and correct old listings with wrong data.",
+""" + note("We lock your NAP, build out your citations over the first months, and hunt down and correct old listings with wrong data. After that they just need monitoring.",
+           "We lock your NAP, build out your citations over the first months, and hunt down and correct old listings with wrong data. After that they just need monitoring.",
            "Hola MAPA, quiero que revisen y arreglen mis citaciones.",
            "Hi MAPA, I want you to review and fix my citations."))
 
 # ======================================================= 8
-ch("c8", "Contenido: tres artículos al mes que sí sirven", "Content: three monthly articles that actually work",
+ch("c8", "Contenido que sí sirve", "Content that actually works",
 """
 <p>“Hay que hacer un blog” es de los consejos peor ejecutados del marketing local. La mayoría de los blogs de negocios de servicio son tres notas de 2019 sobre “la importancia del mantenimiento preventivo”. Eso no sirve para nada.</p>
 
@@ -522,15 +552,15 @@ ch("c8", "Contenido: tres artículos al mes que sí sirven", "Content: three mon
   <li>Cierra con una invitación clara a escribirte, y un enlace a la página del servicio correspondiente.</li>
 </ul>
 
-<h3>Por qué tres al mes y no diez</h3>
-<p>Porque tres bien hechos, cada mes, sin fallar, superan a diez de golpe y luego seis meses de silencio. La constancia es la señal: un sitio que se actualiza es un negocio que sigue vivo. Y porque cada artículo bueno sigue trayendo visitas años después, sin costo adicional.</p>
+<h3>Por qué la constancia gana al volumen</h3>
+<p>Porque unos cuantos bien hechos, cada mes, sin fallar, superan a diez de golpe y luego seis meses de silencio. La constancia es la señal: un sitio que se actualiza es un negocio que sigue vivo. Y porque cada artículo bueno sigue trayendo visitas años después, sin costo adicional.</p>
 
 <h3>Sobre escribir con IA</h3>
 <p>Es una herramienta útil para investigar temas, ordenar ideas y hacer un primer borrador. No es una herramienta para publicar sin leer. Un artículo genérico que podría ser de cualquier plomero del país no posiciona, y lo más importante: no convence a nadie de llamarte. El valor está en lo que solo tú sabes.</p>
-""" + note("Escribimos y publicamos tres artículos al mes, sobre las preguntas reales de tu oficio y tu zona, enlazados a tus páginas de servicio.",
-           "We write and publish three articles a month, on the real questions in your trade and your area, linked to your service pages.",
-           "Hola MAPA, quiero los tres artículos al mes para mi sitio.",
-           "Hi MAPA, I want the three monthly articles for my site."),
+""" + note("Escribimos y publicamos contenido nuevo cada mes, sobre las preguntas reales de tu oficio y tu zona, enlazado a tus páginas de servicio y ciudad.",
+           "We write and publish new content every month, on the real questions in your trade and your area, linked to your service-and-city pages.",
+           "Hola MAPA, quiero que ustedes lleven el contenido de mi sitio.",
+           "Hi MAPA, I want you to handle the content on my site."),
 """
 <p>“You should have a blog” is one of the worst-executed pieces of advice in local marketing. Most service business blogs are three posts from 2019 about “the importance of preventive maintenance”. That does nothing.</p>
 
@@ -561,15 +591,15 @@ ch("c8", "Contenido: tres artículos al mes que sí sirven", "Content: three mon
   <li>Close with a clear invitation to message you, and a link to the matching service page.</li>
 </ul>
 
-<h3>Why three a month and not ten</h3>
-<p>Because three done well, every month, without fail, beats ten at once followed by six months of silence. Consistency is the signal: a site that updates is a business that's still alive. And because each good article keeps bringing visits years later, at no extra cost.</p>
+<h3>Why consistency beats volume</h3>
+<p>Because a few done well, every month, without fail, beat ten at once followed by six months of silence. Consistency is the signal: a site that updates is a business that's still alive. And because each good article keeps bringing visits years later, at no extra cost.</p>
 
 <h3>On writing with AI</h3>
 <p>It's a useful tool for researching topics, organizing ideas and drafting. It is not a tool for publishing unread. A generic article that could belong to any plumber in the country doesn't rank, and more importantly: it convinces nobody to call you. The value is in what only you know.</p>
-""" + note("We write and publish three articles a month, on the real questions in your trade and your area, linked to your service pages.",
-           "We write and publish three articles a month, on the real questions in your trade and your area, linked to your service pages.",
-           "Hola MAPA, quiero los tres artículos al mes para mi sitio.",
-           "Hi MAPA, I want the three monthly articles for my site."))
+""" + note("We write and publish new content every month, on the real questions in your trade and your area, linked to your service-and-city pages.",
+           "We write and publish new content every month, on the real questions in your trade and your area, linked to your service-and-city pages.",
+           "Hola MAPA, quiero que ustedes lleven el contenido de mi sitio.",
+           "Hi MAPA, I want you to handle the content on my site."))
 
 # ======================================================= 9
 ch("c9", "Enlaces locales", "Local links",
@@ -590,13 +620,13 @@ ch("c9", "Enlaces locales", "Local links",
   <li><b>Negocios vecinos que no compiten contigo.</b> Un electricista y un plomero se pueden recomendar mutuamente en sus páginas de “profesionales que recomendamos”.</li>
 </ul>
 
-<h3>Uno al mes es suficiente</h3>
-<p>No necesitas veinte enlaces al mes. Necesitas uno bueno, conseguido de verdad, todos los meses. Doce enlaces locales reales al año es más de lo que tiene la mayoría de tus competidores, y no se te cae ninguno cuando cambie el algoritmo.</p>
+<h3>Pocos y buenos</h3>
+<p>No necesitas veinte enlaces al mes. Necesitas unos pocos, conseguidos de verdad, a lo largo del año. Un puñado de enlaces locales reales es más de lo que tiene la mayoría de tus competidores, y no se te cae ninguno cuando cambie el algoritmo. En zonas poco peleadas puede que ya tengas los que necesitas y el esfuerzo rinda más en otro lado.</p>
 
 <h3>Cómo pedirlos sin sonar a spam</h3>
 <p>El error es mandar un correo genérico pidiendo un enlace. Lo que funciona es dar algo primero: patrocina de verdad, participa de verdad, ofrece un descuento a los miembros de la asociación, o escribe algo útil que ellos quieran publicar. El enlace viene solo cuando hay una relación real detrás.</p>
-""" + note("Conseguimos un enlace local nuevo cada mes, de sitios reales relacionados con tu oficio y tu ciudad. Nada de paquetes ni granjas de enlaces.",
-           "We earn one new local link every month, from real sites related to your trade and your city. No packages, no link farms.",
+""" + note("Conseguimos enlaces locales de sitios reales relacionados con tu oficio y tu ciudad, cuando tu competencia y tu zona lo piden. Nada de paquetes ni granjas de enlaces, y nada de forzar enlaces que no necesitas.",
+           "We earn local links from real sites related to your trade and your city, when your competition and your area call for it. No packages, no link farms, and no forcing links you don't need.",
            "Hola MAPA, quiero que trabajen los enlaces locales de mi negocio.",
            "Hi MAPA, I want you to work on local links for my business."),
 """
@@ -616,13 +646,13 @@ ch("c9", "Enlaces locales", "Local links",
   <li><b>Neighboring businesses that don't compete with you.</b> An electrician and a plumber can recommend each other on their “pros we trust” pages.</li>
 </ul>
 
-<h3>One a month is enough</h3>
-<p>You don't need twenty links a month. You need one good one, genuinely earned, every month. Twelve real local links a year is more than most of your competitors have, and none of them disappear when the algorithm changes.</p>
+<h3>Few and good</h3>
+<p>You don't need twenty links a month. You need a few, genuinely earned, across the year. A handful of real local links is more than most of your competitors have, and none of them disappear when the algorithm changes. In a low-competition area you may already have what you need, and the effort pays off better elsewhere.</p>
 
 <h3>How to ask without sounding like spam</h3>
 <p>The mistake is sending a generic email asking for a link. What works is giving something first: actually sponsor, actually participate, offer a discount to association members, or write something useful they'd want to publish. The link follows on its own when there's a real relationship behind it.</p>
-""" + note("We earn one new local link every month, from real sites related to your trade and your city. No packages, no link farms.",
-           "We earn one new local link every month, from real sites related to your trade and your city. No packages, no link farms.",
+""" + note("We earn local links from real sites related to your trade and your city, when your competition and your area call for it. No packages, no link farms, and no forcing links you don't need.",
+           "We earn local links from real sites related to your trade and your city, when your competition and your area call for it. No packages, no link farms, and no forcing links you don't need.",
            "Hola MAPA, quiero que trabajen los enlaces locales de mi negocio.",
            "Hi MAPA, I want you to work on local links for my business."))
 
@@ -773,7 +803,7 @@ body = f'''<div class="progress" aria-hidden="true"></div>
     <p class="legend"><span data-l="es">La guía · 11 capítulos</span><span data-l="en">The guide · 11 chapters</span></p>
     <h1 style="max-width:17ch"><span data-l="es">Marketing local para negocios de servicio</span>
       <span data-l="en">Local marketing for service businesses</span></h1>
-    <p class="lede"><span data-l="es">Todo lo que hacemos por nuestros clientes, explicado completo y gratis: sitio web, diseño que convierte, el Perfil de Google, Apple Maps, Bing, Yelp, citaciones, contenido, enlaces, búsqueda con IA y qué medir cada mes.</span>
+    <p class="lede"><span data-l="es">Todo lo que hacemos por nuestros clientes, explicado completo y gratis: estructura del sitio, diseño que convierte, el Perfil de Google, Apple Maps, Bing, Yelp, citaciones, contenido, enlaces, búsqueda con IA y qué medir cada mes.</span>
       <span data-l="en">Everything we do for clients, explained in full and for free: website, design that converts, the Google profile, Apple Maps, Bing, Yelp, citations, content, links, AI search, and what to measure each month.</span></p>
     <div class="btnrow" style="margin-top:1.8rem">
       {wa("Hola MAPA, leí su guía y prefiero que ustedes lo hagan. Mi negocio es ___ en ___.",

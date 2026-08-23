@@ -298,6 +298,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
 }
 .dark .deliv li,.deep .deliv li{border-color:rgba(239,241,236,.13)}
 .deliv li:last-child{border-bottom:0}
+/* Todo el contenido va en la segunda columna. Sin esto, los <span> caen en la
+   columna del icono (22px) y el texto se parte palabra por palabra. */
+.deliv li > *{grid-column:2;min-width:0}
 .deliv li::before{
   content:"";width:15px;height:15px;margin-top:.32rem;border-radius:50%;
   border:1.5px solid var(--wa);
@@ -569,3 +572,33 @@ hr.rule{border:0;border-top:1px solid var(--rule);margin:clamp(2.4rem,5vw,4rem) 
 @media (max-width:560px){
   .foot{padding-bottom:6rem}
 }
+
+/* ==========================================================================
+   Correcciones de desbordamiento horizontal (móvil)
+   Los hijos de un grid tienen min-width:auto por defecto, así que un <pre> o
+   una <table> anchos estiran toda la columna y sacan la página de la pantalla.
+   ========================================================================== */
+.guide > *,
+.hero__grid > *,
+.tiles > *,
+.route__stop > *,
+.money > *,
+.brk__row > *,
+.foot__grid > *{min-width:0}
+
+.chapter pre{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+.table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media (max-width:640px){
+  .chapter pre{font-size:.72rem}
+  .table th,.table td{padding:.55rem .45rem;font-size:.85rem}
+}
+
+/* El índice de la guía no debe estirarse en móvil */
+@media (max-width:940px){
+  .toc{max-width:100%;overflow:hidden}
+  .toc a{white-space:normal}
+}
+
+/* Texto del centro del mapa en inglés (más largo que el español) */
+.mapfig .core-t--en{font-size:12.5px}
