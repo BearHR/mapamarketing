@@ -16,7 +16,7 @@ EN = ROOT / 'en'
 
 # Cambia esto cuando conectes tu dominio propio.
 SITE = 'https://bearhr.github.io/mapamarketing'
-WA = 'https://wa.me/527711150327'
+WA = 'https://wa.me/17262556888'
 BRAND = 'MAPA Marketing'
 
 # --------------------------------------------------------------------------

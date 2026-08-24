@@ -58,7 +58,7 @@ diag = thero("Herramienta 01", "Tool 01",
         <ul class="todo" id="auditFixes"></ul>
       </div>
 
-      <a class="btn btn--wa wa" id="auditWA" href="https://wa.me/527711150327"
+      <a class="btn btn--wa wa" id="auditWA" href="https://wa.me/17262556888"
          data-msg-es="Hola MAPA, hice el diagnóstico en su sitio."
          data-msg-en="Hi MAPA, I took the check on your site.">
         <span data-l="es">Mandar mi resultado por WhatsApp</span><span data-l="en">Send my result on WhatsApp</span>
@@ -126,7 +126,7 @@ calc = thero("Herramienta 02", "Tool 02",
         <span data-l="es">Esto es una estimación con tus propios números, no una promesa de resultados. Sirve para una cosa: decidir si vale la pena que te encuentren.</span>
         <span data-l="en">This is an estimate built from your own numbers, not a promise of results. It's good for one thing: deciding whether being found is worth it.</span>
       </p>
-      <a class="btn btn--wa wa" id="calcWA" href="https://wa.me/527711150327"
+      <a class="btn btn--wa wa" id="calcWA" href="https://wa.me/17262556888"
          data-msg-es="Hola MAPA, corrí la calculadora en su sitio."
          data-msg-en="Hi MAPA, I ran the calculator on your site.">
         <span data-l="es">Mandar mis números por WhatsApp</span><span data-l="en">Send my numbers on WhatsApp</span>
@@ -179,7 +179,7 @@ posts = thero("Herramienta 03", "Tool 03",
         <span data-l="en">Paste them into your Google Business Profile, one per week. Add a real photo of your work to each: posts with photos get seen far more.</span>
       </p>
       <div id="pOut"></div>
-      <a class="btn btn--wa wa" id="pWA" href="https://wa.me/527711150327"
+      <a class="btn btn--wa wa" id="pWA" href="https://wa.me/17262556888"
          data-msg-es="Hola MAPA, usé el generador de publicaciones."
          data-msg-en="Hi MAPA, I used the post generator.">
         <span data-l="es">Que ustedes las hagan cada mes</span><span data-l="en">Have you do these every month</span>
@@ -322,7 +322,7 @@ cit = thero("Herramienta 05", "Tool 05",
       <span data-l="en">Signing up isn't enough: you have to hunt down and correct old listings that already exist with wrong data. That cleanup work is usually worth more than twenty new signups.</span>
     </div>
 
-    <a class="btn btn--wa wa" id="citWA" href="https://wa.me/527711150327"
+    <a class="btn btn--wa wa" id="citWA" href="https://wa.me/17262556888"
        data-msg-es="Hola MAPA, quiero que ustedes construyan y corrijan mis citaciones."
        data-msg-en="Hi MAPA, I want you to build and clean up my citations.">
       <span data-l="es">Que ustedes lo hagan por mí</span><span data-l="en">Have you do it for me</span>

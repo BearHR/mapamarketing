@@ -8,14 +8,14 @@ from weasyprint import HTML
 
 ROOT = pathlib.Path('/home/claude/mapa')
 FONTS = pathlib.Path('/home/claude/ads/fonts')
-WA_NUM = '+52 771 115 0327'
-WA_URL = 'https://wa.me/527711150327'
+WA_NUM = '+1 (726) 255-6888'
+WA_URL = 'https://wa.me/17262556888'
 
 T = {
  'es': dict(
     src='guia.html', out='assets/guia-marketing-local-mapa-marketing.pdf',
-    kicker='GUÍA COMPLETA', title='Marketing local para negocios de servicio',
-    sub='Cómo hacer que tu negocio salga primero en el mapa',
+    kicker='GUÍA GRATIS · 11 CAPÍTULOS', title='Cómo llenar tu semana de trabajo',
+    sub='La guía de marketing local para negocios de servicio: cómo hacer que los clientes de tu zona te encuentren primero',
     chapters='11 capítulos', by='MAPA MARKETING',
     toc='Contenido', chapter='Capítulo',
     introh='Antes de empezar',
@@ -31,8 +31,8 @@ T = {
     note='Cómo lo hacemos nosotros', short='En corto'),
  'en': dict(
     src='en/guia.html', out='assets/local-marketing-guide-mapa-marketing.pdf',
-    kicker='THE COMPLETE GUIDE', title='Local marketing for service businesses',
-    sub='How to get your business to the top of the map',
+    kicker='FREE GUIDE · 11 CHAPTERS', title='How to fill your week with work',
+    sub='The local marketing guide for service businesses: how to get customers in your area to find you first',
     chapters='11 chapters', by='MAPA MARKETING',
     toc='Contents', chapter='Chapter',
     introh='Before you start',
