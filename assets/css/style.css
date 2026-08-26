@@ -610,3 +610,26 @@ hr.rule{border:0;border-top:1px solid var(--rule);margin:clamp(2.4rem,5vw,4rem) 
 .route__body h2{font-size:clamp(1.2rem,1.05rem + .7vw,1.62rem);font-weight:700;letter-spacing:-.018em}
 .out .out__k{margin:0 0 .4rem}
 .foot .foot__h{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-inv);font-weight:500;margin:0 0 1rem}
+
+/* ==========================================================================
+   Figuras (SVG en línea) — guía, servicios y proceso
+   ========================================================================== */
+.fig{width:100%;height:auto;display:block;margin:1.8rem 0 .6rem}
+.fig .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1.6px;fill:var(--muted)}
+.fig .cap{font-family:var(--body);font-size:12px;fill:var(--muted)}
+.fig .row{font-family:var(--body);font-size:15px;font-weight:600;fill:var(--ink)}
+.fig .stp{font-family:var(--display);font-size:14px;font-weight:700;fill:var(--ink)}
+.fig .pin{font-family:var(--display);font-size:13px;font-weight:800;fill:#fff;text-anchor:middle}
+.fig .val{font-family:var(--display);font-size:15px;font-weight:800;fill:var(--ink)}
+.fig .big{font-family:var(--display);font-size:21px;font-weight:900;fill:var(--ink)}
+.fig .cell{font-family:var(--body);font-size:11.5px;fill:var(--ink)}
+.fig .hd{font-family:var(--mono);font-size:11px;letter-spacing:1.2px;fill:var(--muted)}
+.figcap{
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 2rem;
+}
+.figwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media (max-width:640px){
+  .fig{min-width:440px}
+  .figwrap{margin-inline:calc(var(--gut) * -.5);padding-inline:calc(var(--gut) * .5)}
+}

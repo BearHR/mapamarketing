@@ -2,6 +2,15 @@
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from common import page, wa
+import visuals as V
+
+V.PAPER = '#E4E8E0'
+
+
+def figpair(es_svg, en_svg, pie_es, pie_en):
+    return ('<div class="figwrap reveal" data-l="es">%s<p class="figcap">%s</p></div>'
+            '<div class="figwrap reveal" data-l="en">%s<p class="figcap">%s</p></div>'
+            % (es_svg, pie_es, en_svg, pie_en))
 
 def phero(legend_es, legend_en, h1_es, h1_en, sub_es, sub_en):
     return f'''<section class="deep grid-bg sec sec--tight">
@@ -43,8 +52,8 @@ servicios = phero(
     "Servicios", "Services",
     "Servicios: sitio web y marketing local mensual",
     "Services: website and monthly local marketing",
-    "Un programa en dos fases. La primera construye la base, la segunda la hace rendir. El sitio web va incluido cuando arrancas con seis meses de trabajo mensual, y aquí está exactamente qué pasa en cada fase.",
-    "One program in two phases. The first builds the foundation, the second makes it pay off. The website is included when you start with six months of ongoing work, and here's exactly what happens in each phase."
+    "Un programa en dos fases. La primera construye la base, la segunda la hace rendir. El sitio web va incluido cuando arrancas con cuatro meses de trabajo mensual, y aquí está exactamente qué pasa en cada fase.",
+    "One program in two phases. The first builds the foundation, the second makes it pay off. The website is included when you start with four months of ongoing work, and here's exactly what happens in each phase."
 ) + '''
 
 <section class="sec">
@@ -58,7 +67,11 @@ servicios = phero(
       </p>
     </div>
     <div class="route">
-''' + block("01", "Arquitectura antes que diseño", "Architecture before design",
+''' + figpair(
+      V.matriz(['Reparación de fugas','Destape de drenajes','Calentadores'], ['Houston','Katy','Sugar Land'], 'es'),
+      V.matriz(['Leak repair','Drain cleaning','Water heaters'], ['Houston','Katy','Sugar Land'], 'en'),
+      'Servicios por ciudades: de ahí sale tu número de páginas',
+      'Services times cities: that is where your page count comes from') + block("01", "Arquitectura antes que diseño", "Architecture before design",
   "Antes de escoger un color decidimos qué páginas van a existir. Y no son una de servicios y otra de ciudades: es una página para cada servicio en cada ciudad. Destape de drenajes en Katy. Destape de drenajes en Sugar Land. Calentadores en Katy. Más las de apoyo: sobre el negocio, reseñas y contacto.",
   "Before picking a color we decide which pages will exist. And it isn't one services page plus one city page: it's one page for each service in each city. Drain cleaning in Katy. Drain cleaning in Sugar Land. Water heaters in Katy. Plus the support pages: about, reviews and contact.",
   "Google no puede mandar a alguien que busca «destape de drenaje en Katy» a una página que dice «servicios generales», ni a una que solo habla de Katy en general. Necesita una página que trate exactamente de ese servicio en esa ciudad, y esa es la que se lleva la llamada.",
@@ -215,6 +228,12 @@ proceso = phero(
 
 <section class="sec">
   <div class="wrap">
+    ''' + figpair(
+      V.ruta([('Nos escribes','Hoy'), ('Diagnóstico','Día 1–3'), ('El mapa','Semana 1'),
+              ('El sitio','Semanas 2–4'), ('Los 4 mapas','Semana 4'), ('El ritmo','Cada mes')]),
+      V.ruta([('You message','Today'), ('Diagnosis','Day 1–3'), ('The map','Week 1'),
+              ('The site','Weeks 2–4'), ('The 4 maps','Week 4'), ('The rhythm','Monthly')]),
+      'Del primer mensaje al ritmo mensual', 'From first message to monthly rhythm') + '''
     <div class="route">
       <div class="route__stop reveal">
         <div class="route__n">00<small><span data-l="es">HOY</span><span data-l="en">TODAY</span></small></div>

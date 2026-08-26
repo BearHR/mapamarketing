@@ -2,6 +2,47 @@
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from common import page, wa
+import visuals as V
+
+# En el sitio el fondo es claro: el neutro de las figuras se oscurece un punto
+V.PAPER = '#E4E8E0'
+
+
+
+SVC_ES = ['Reparación de fugas', 'Destape de drenajes', 'Calentadores']
+SVC_EN = ['Leak repair', 'Drain cleaning', 'Water heaters']
+CIU = ['Houston', 'Katy', 'Sugar Land']
+
+
+def fig(es_svg, en_svg, pie_es, pie_en):
+    """Una figura por idioma; split.py se queda con la que toca."""
+    return ('<div class="figwrap" data-l="es">%s<p class="figcap">%s</p></div>'
+            '<div class="figwrap" data-l="en">%s<p class="figcap">%s</p></div>'
+            % (es_svg, pie_es, en_svg, pie_en))
+
+
+def figuras_web():
+    return {
+        'c1': fig(V.caminos('es') + V.factores('es'), V.caminos('en') + V.factores('en'),
+                  'Los cuatro caminos, y los tres factores que ordenan el mapa',
+                  'The four paths, and the three factors that order the map'),
+        'c2': fig(V.matriz(SVC_ES, CIU, 'es'), V.matriz(SVC_EN, CIU, 'en'),
+                  'Servicios por ciudades: de ahí sale tu número de páginas',
+                  'Services times cities: that is where your page count comes from'),
+        'c5': fig(V.perfil('es'), V.perfil('en'),
+                  'Anatomía del Perfil de Negocio de Google',
+                  'Anatomy of the Google Business Profile'),
+        'c7': fig(V.nap('es'), V.nap('en'),
+                  'El mismo negocio, escrito bien y escrito mal',
+                  'The same business, written right and written wrong'),
+        'c9': fig(V.enlaces('es'), V.enlaces('en'),
+                  'Por qué uno bueno le gana a cincuenta comprados',
+                  'Why one good link beats fifty bought ones'),
+        'c11': fig(V.scorecard('es'), V.scorecard('en'),
+                   'El tablero de una hoja, cada mes',
+                   'The one-page dashboard, every month'),
+    }
+
 
 CH = []
 
@@ -786,13 +827,29 @@ toc = "".join(
     f'<li><a href="#{cid}"><span data-l="es">{t_es}</span><span data-l="en">{t_en}</span></a></li>'
     for cid, t_es, t_en, _, _ in CH)
 
+FIGS = figuras_web()
+
+
+import re as _re
+
+
+def con_figura(cuerpo, cid):
+    f = FIGS.get(cid)
+    if cid == 'c11':      # el tablero ya está dibujado; sobra el bloque de texto
+        cuerpo = _re.sub(r'<pre.*?</pre>', '', cuerpo, flags=_re.S)
+    if not f:
+        return cuerpo
+    k = cuerpo.find('</p>')
+    return (cuerpo[:k + 4] + f + cuerpo[k + 4:]) if k > 0 else f + cuerpo
+
+
 chapters = ""
 for i, (cid, t_es, t_en, es, en) in enumerate(CH, 1):
     chapters += f'''<article class="chapter" id="{cid}">
   <span class="chapter__n"><span data-l="es">Capítulo {i:02d}</span><span data-l="en">Chapter {i:02d}</span></span>
   <h2><span data-l="es">{t_es}</span><span data-l="en">{t_en}</span></h2>
-  <div data-l="es">{es}</div>
-  <div data-l="en">{en}</div>
+  <div data-l="es">{con_figura(es, cid)}</div>
+  <div data-l="en">{con_figura(en, cid)}</div>
 </article>
 '''
 

@@ -3,8 +3,11 @@
 Uso: python3 _build/make_pdf.py
 """
 import pathlib, re, sys
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from bs4 import BeautifulSoup
 from weasyprint import HTML
+import visuals as V
 
 ROOT = pathlib.Path('/home/claude/mapa')
 FONTS = pathlib.Path('/home/claude/ads/fonts')
@@ -48,7 +51,7 @@ T = {
     note='How we handle it', short='In short'),
 }
 
-CSS = """
+CSS = ("""
 @font-face{font-family:Archivo;src:url('file://__F__/Archivo-700.ttf');font-weight:700}
 @font-face{font-family:Archivo;src:url('file://__F__/Archivo-800.ttf');font-weight:800}
 @font-face{font-family:Archivo;src:url('file://__F__/Archivo-900.ttf');font-weight:900}
@@ -63,6 +66,7 @@ CSS = """
   @bottom-right{content:counter(page);font-family:'DM Mono';font-size:8pt;color:#55665F}
 }
 @page cover{margin:0; @bottom-left{content:''} @bottom-right{content:''}}
+
 @page nofoot{ @bottom-left{content:''} @bottom-right{content:''}}
 
 body{font-family:'Public Sans';font-size:10.2pt;line-height:1.62;color:#12212E;margin:0}
@@ -152,7 +156,7 @@ th{font-family:'DM Mono';font-size:7.4pt;letter-spacing:.13em;text-transform:upp
   letter-spacing:.10em}
 .cta .fine{font-family:'DM Mono';font-size:7.6pt;letter-spacing:.14em;color:#93A7B2;
   margin-top:7mm;border-top:.5pt solid rgba(239,241,236,.2);padding-top:5mm}
-""".replace("__F__", str(FONTS))
+""" + V.CSS_FIG).replace("__F__", str(FONTS))
 
 PIN = ('<svg class="pin" width="96" height="96" viewBox="0 0 40 40">'
        '<circle cx="20" cy="20" r="19" fill="none" stroke="#1F4A55" stroke-width="1" '
@@ -162,8 +166,45 @@ PIN = ('<svg class="pin" width="96" height="96" viewBox="0 0 40 40">'
        '<circle cx="20" cy="16.8" r="3.2" fill="#07161F"/></svg>')
 
 
-def clean(node, t):
+SERVICIOS_DEMO = ['Reparación de fugas', 'Destape de drenajes', 'Calentadores']
+SERVICES_DEMO = ['Leak repair', 'Drain cleaning', 'Water heaters']
+CIUDADES_DEMO = ['Houston', 'Katy', 'Sugar Land']
+
+# Capítulos cuyo <pre> de texto se sustituye por una figura de verdad
+SIN_PRE = {2, 11}
+
+
+def figuras(lang):
+    """Qué figura va en qué capítulo, y su pie."""
+    svc = SERVICES_DEMO if lang == 'en' else SERVICIOS_DEMO
+    cap = lambda es, en: en if lang == 'en' else es
+    return {
+        1: (V.caminos(lang) + V.factores(lang),
+            cap('Los cuatro caminos, y los tres factores que ordenan el mapa',
+                'The four paths, and the three factors that order the map')),
+        2: (V.matriz(svc, CIUDADES_DEMO, lang),
+            cap('Servicios por ciudades: de ahí sale tu número de páginas',
+                'Services times cities: that is where your page count comes from')),
+        5: (V.perfil(lang),
+            cap('Anatomía del Perfil de Negocio de Google',
+                'Anatomy of the Google Business Profile')),
+        7: (V.nap(lang),
+            cap('El mismo negocio, escrito bien y escrito mal',
+                'The same business, written right and written wrong')),
+        9: (V.enlaces(lang),
+            cap('Por qué uno bueno le gana a cincuenta comprados',
+                'Why one good link beats fifty bought ones')),
+        11: (V.scorecard(lang),
+             cap('El tablero de una hoja, cada mes',
+                 'The one-page dashboard, every month')),
+    }
+
+
+def clean(node, t, drop_pre=False):
     """Adapta el HTML del sitio al formato impreso."""
+    if drop_pre:
+        for el in node.find_all('pre'):
+            el.decompose()
     for el in node.select('.prose-note a.wa, .prose-note a'):
         el.name = 'span'
         el['class'] = ['wa']
@@ -188,6 +229,7 @@ def build(lang):
     if not chapters:
         sys.exit('no se encontraron capítulos en ' + t['src'])
 
+    FIGS = figuras(lang)
     parts = []
     parts.append(
       '<div class="cover"><div class="g"></div>%s<div class="in">'
@@ -207,8 +249,14 @@ def build(lang):
     for i, c in enumerate(chapters, 1):
         title = c.find('h2').get_text(' ', strip=True)
         body = c.find('div') or BeautifulSoup('', 'html.parser')
-        clean(body, t)
+        clean(body, t, drop_pre=(i in SIN_PRE))
         inner = body.decode_contents() if hasattr(body, 'decode_contents') else ''
+        fig = FIGS.get(i)
+        if fig:
+            svg, pie = fig
+            bloque = svg + '<p class="figcap">%s</p>' % pie
+            k = inner.find('</p>')
+            inner = (inner[:k + 4] + bloque + inner[k + 4:]) if k > 0 else bloque + inner
         parts.append('<section class="chapter" id="c%d"><div class="num">%s %02d</div>'
                      '<h2>%s</h2>%s</section>' % (i, t['chapter'].upper(), i, title, inner))
 
