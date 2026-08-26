@@ -9,8 +9,8 @@ from bs4 import BeautifulSoup
 from weasyprint import HTML
 import visuals as V
 
-ROOT = pathlib.Path('/home/claude/mapa')
-FONTS = pathlib.Path('/home/claude/ads/fonts')
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+FONTS = pathlib.Path(__file__).resolve().parent / 'fonts'
 WA_NUM = '+1 (726) 255-6888'
 WA_URL = 'https://wa.me/17262556888'
 

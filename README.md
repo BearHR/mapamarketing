@@ -15,7 +15,7 @@ Se publica tal cual en GitHub Pages.
 
 El archivo `.nojekyll` ya está incluido para que GitHub no procese nada raro.
 
-### Dominio propio
+### Dominio propio (ya conectado)
 1. Compra el dominio.
 2. En **Settings → Pages → Custom domain** escribe tu dominio y guarda (GitHub creará un archivo `CNAME`).
 3. En tu proveedor de dominio apunta los registros A de GitHub Pages, o un CNAME a `TU-USUARIO.github.io`.
@@ -29,7 +29,7 @@ El archivo `.nojekyll` ya está incluido para que GitHub no procese nada raro.
 |---|---|
 | **Número de WhatsApp** | `assets/js/main.js`, línea `MAPA.PHONE = '17262556888'` — solo dígitos, con código de país, sin `+` ni espacios. |
 | Enlaces `href` de respaldo | Busca y reemplaza `wa.me/17262556888` en todos los `.html` (funcionan si el JS no carga). |
-| Dominio en `sitemap.xml` y `robots.txt` | Reemplaza `https://TU-DOMINIO.com` por el real. |
+| Dominio | Ya está puesto: `mapamarketing.com`. Si cambia, edita `SITE` en `_build/split.py` y vuelve a correr ese script. |
 
 Comando rápido para cambiar el número en todo el proyecto (Mac/Linux):
 
@@ -115,7 +115,7 @@ WhatsApp. Si editas un capítulo, vuelve a correr `guide.py`, `split.py` y `make
 ese orden. El enlace para mandar por WhatsApp es:
 
 ```
-https://TU-DOMINIO.com/assets/guia-marketing-local-mapa-marketing.pdf
+https://mapamarketing.com/assets/guia-marketing-local-mapa-marketing.pdf
 ```
 
 ### Al conectar tu dominio

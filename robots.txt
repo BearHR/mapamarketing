@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bearhr.github.io/mapamarketing/sitemap.xml
+Sitemap: https://mapamarketing.com/sitemap.xml

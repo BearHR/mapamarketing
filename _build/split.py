@@ -15,7 +15,7 @@ SRC = ROOT / '_src'
 EN = ROOT / 'en'
 
 # Cambia esto cuando conectes tu dominio propio.
-SITE = 'https://bearhr.github.io/mapamarketing'
+SITE = 'https://mapamarketing.com'
 WA = 'https://wa.me/17262556888'
 BRAND = 'MAPA Marketing'
 
