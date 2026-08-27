@@ -6,7 +6,7 @@
 
   /* ---------- Configuración ---------- */
   window.MAPA = window.MAPA || {};
-  MAPA.PHONE = '17262556888'; // <-- cambia aquí el número (solo dígitos, con código de país)
+  MAPA.PHONE = '19805164214'; // <-- cambia aquí el número (solo dígitos, con código de país)
 
   /* Almacenamiento tolerante a fallos (modo incógnito, iframes, etc.) */
   var mem = {};

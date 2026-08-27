@@ -27,15 +27,15 @@ El archivo `.nojekyll` ya está incluido para que GitHub no procese nada raro.
 
 | Qué | Dónde |
 |---|---|
-| **Número de WhatsApp** | `assets/js/main.js`, línea `MAPA.PHONE = '17262556888'` — solo dígitos, con código de país, sin `+` ni espacios. |
-| Enlaces `href` de respaldo | Busca y reemplaza `wa.me/17262556888` en todos los `.html` (funcionan si el JS no carga). |
+| **Número de WhatsApp** | `assets/js/main.js`, línea `MAPA.PHONE = '19805164214'` — solo dígitos, con código de país, sin `+` ni espacios. |
+| Enlaces `href` de respaldo | Busca y reemplaza `wa.me/19805164214` en todos los `.html` (funcionan si el JS no carga). |
 | Dominio | Ya está puesto: `mapamarketing.com`. Si cambia, edita `SITE` en `_build/split.py` y vuelve a correr ese script. |
 
 Comando rápido para cambiar el número en todo el proyecto (Mac/Linux):
 
 ```bash
-grep -rl '17262556888' . | xargs sed -i '' 's/17262556888/TUNUEVONUMERO/g'   # macOS
-grep -rl '17262556888' . | xargs sed -i  's/17262556888/TUNUEVONUMERO/g'      # Linux
+grep -rl '19805164214' . | xargs sed -i '' 's/19805164214/TUNUEVONUMERO/g'   # macOS
+grep -rl '19805164214' . | xargs sed -i  's/19805164214/TUNUEVONUMERO/g'      # Linux
 ```
 
 ---
@@ -146,7 +146,7 @@ Cualquier enlace con `class="wa"` se convierte automáticamente en un enlace de 
 mensaje prellenado:
 
 ```html
-<a class="wa" href="https://wa.me/17262556888"
+<a class="wa" href="https://wa.me/19805164214"
    data-msg-es="Hola MAPA, quiero información."
    data-msg-en="Hi MAPA, I'd like some info.">Escríbenos</a>
 ```

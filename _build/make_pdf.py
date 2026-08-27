@@ -11,8 +11,8 @@ import visuals as V
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 FONTS = pathlib.Path(__file__).resolve().parent / 'fonts'
-WA_NUM = '+1 (726) 255-6888'
-WA_URL = 'https://wa.me/17262556888'
+WA_NUM = '+1 (980) 516-4214'
+WA_URL = 'https://wa.me/19805164214'
 
 T = {
  'es': dict(
@@ -202,6 +202,10 @@ def figuras(lang):
 
 def clean(node, t, drop_pre=False):
     """Adapta el HTML del sitio al formato impreso."""
+    # El sitio ya trae sus propias figuras (ancha + apilada). En el PDF se
+    # quitan y se vuelven a insertar sólo las de impresión: si no, salen dos veces.
+    for el in node.select('.figwrap'):
+        el.decompose()
     if drop_pre:
         for el in node.find_all('pre'):
             el.decompose()

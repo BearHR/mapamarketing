@@ -43,7 +43,7 @@ WA_ICON = ('<svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" 
 
 
 def wa(msg_es, msg_en, label_es, label_en, cls="btn btn--wa", icon=True, eid=None):
-    return (f'<a class="{cls} wa"{" id="+chr(34)+eid+chr(34) if eid else ""} href="https://wa.me/17262556888" '
+    return (f'<a class="{cls} wa"{" id="+chr(34)+eid+chr(34) if eid else ""} href="https://wa.me/19805164214" '
             f'data-msg-es="{msg_es}" data-msg-en="{msg_en}">'
             f'{WA_ICON if icon else ""}'
             f'<span data-l="es">{label_es}</span><span data-l="en">{label_en}</span></a>')

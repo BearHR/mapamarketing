@@ -64,7 +64,7 @@ def caminos(lang='es'):
             out += (f'<path d="M{x+bw+3},67 L{x+bw+gap-3},67" stroke="{RULE}" '
                     f'stroke-width="2"/>')
     out += (f'<rect x="0" y="122" width="600" height="34" rx="8" fill="{INK}"/>'
-            f'<text x="300" y="144" class="stp" text-anchor="middle" fill="#EFF1EC">'
+            f'<text x="300" y="144" class="stp" text-anchor="middle" style="fill:#EFF1EC">'
             f'{"YOUR BUSINESS" if lang=="en" else "TU NEGOCIO"}</text>')
     for i in range(4):
         x = i * (bw + gap) + bw / 2
@@ -117,12 +117,12 @@ def matriz(servicios, ciudades, lang='es'):
             out += (f'<rect x="{x+4}" y="{y+4}" width="{cw-8}" height="{rh-8}" rx="5" '
                     f'fill="rgba(37,211,102,.16)" stroke="{WA}" stroke-width="1.2"/>'
                     f'<text x="{x+cw/2}" y="{y+21}" class="cap" text-anchor="middle" '
-                    f'fill="{INK}">{celda}</text>')
+                    f' style="fill:{INK}">{celda}</text>')
     n = len(servicios) * len(ciudades)
     txt = (f'{len(servicios)} × {len(ciudades)} = {n} '
            + ('pages to build' if lang == 'en' else 'páginas que construir'))
     out += (f'<rect x="0" y="{H-26}" width="{W}" height="26" rx="6" fill="{INK}"/>'
-            f'<text x="{W/2}" y="{H-8}" class="stp" text-anchor="middle" fill="#EFF1EC">{txt}</text>')
+            f'<text x="{W/2}" y="{H-8}" class="stp" text-anchor="middle" style="fill:#EFF1EC">{txt}</text>')
     return f'<svg viewBox="0 0 {W} {H}" class="fig">{out}</svg>'
 
 
@@ -133,8 +133,8 @@ def nap(lang='es'):
     bad = ['Ramirez Plumbing', '1420 Bellaire Blvd.', 'Houston TX 77081', '713-555-0142']
     hl = ('CORRECT · THE SAME EVERYWHERE', 'INCONSISTENT · GOOGLE HESITATES') if lang == 'en' \
         else ('BIEN · IGUAL EN TODOS LADOS', 'MAL · GOOGLE DUDA')
-    out = (f'<text x="0" y="12" class="lbl" fill="{WA}">{hl[0]}</text>'
-           f'<text x="310" y="12" class="lbl" fill="{CLAY}">{hl[1]}</text>'
+    out = (f'<text x="0" y="12" class="lbl" style="fill:{WA}">{hl[0]}</text>'
+           f'<text x="310" y="12" class="lbl" style="fill:{CLAY}">{hl[1]}</text>'
            f'<rect x="0" y="22" width="285" height="112" rx="8" fill="rgba(37,211,102,.10)" '
            f'stroke="{WA}" stroke-width="1.5"/>'
            f'<rect x="310" y="22" width="285" height="112" rx="8" fill="rgba(221,75,52,.08)" '
@@ -142,7 +142,7 @@ def nap(lang='es'):
     for i in range(4):
         y = 46 + i * 24
         out += (f'<text x="16" y="{y}" class="cell">{ok[i]}</text>'
-                f'<text x="326" y="{y}" class="cell" fill="{CLAY}">{bad[i]}</text>')
+                f'<text x="326" y="{y}" class="cell" style="fill:{CLAY}">{bad[i]}</text>')
     return f'<svg viewBox="0 0 600 140" class="fig">{out}</svg>'
 
 
@@ -208,8 +208,8 @@ def enlaces(lang='es'):
                     f'style="font-size:11px">{ln}</text>')
         out += (f'<line x1="{x0+18}" y1="{124}" x2="{x0+bw-18}" y2="124" '
                 f'stroke="{RULE}" stroke-width="1"/>'
-                f'<text x="{x0+18}" y="139" class="cap" style="font-size:11px" '
-                f'fill="{fcol}">{foot}</text>')
+                f'<text x="{x0+18}" y="139" class="cap" style="font-size:11px;fill:{fcol}" '
+                f'>{foot}</text>')
     cx = bw + gapc / 2
     out += (f'<text x="{cx}" y="72" style="font-family:Archivo;font-size:26px;'
             f'font-weight:900;fill:{INK}" text-anchor="middle">&gt;</text>'
@@ -236,9 +236,9 @@ def scorecard(lang='es'):
         out += (f'<rect x="0" y="{y}" width="600" height="32" rx="6" fill="{PAPER}"/>'
                 f'<text x="16" y="{y+21}" class="row">{t}</text>'
                 f'<text x="380" y="{y+22}" class="big" text-anchor="middle" '
-                f'fill="{WA if up else INK}">{a}</text>'
-                f'<text x="510" y="{y+21}" class="row" text-anchor="middle" fill="{MUTED}">{b}</text>'
-                f'<text x="575" y="{y+21}" class="row" fill="{WA if up else CLAY}">'
+                f' style="fill:{WA if up else INK}">{a}</text>'
+                f'<text x="510" y="{y+21}" class="row" text-anchor="middle" style="fill:{MUTED}">{b}</text>'
+                f'<text x="575" y="{y+21}" class="row" style="fill:{WA if up else CLAY}">'
                 f'{"↑" if up else "↓"}</text>')
     return f'<svg viewBox="0 0 600 {22+4*40}" class="fig">{out}</svg>'
 
@@ -283,14 +283,14 @@ def rank(competidores, negocio, pos_txt):
                  f'<circle cx="26" cy="{y+21}" r="13" fill="#9AA69E"/>'
                  f'<text x="26" y="{y+26}" class="pin">{i+1}</text>'
                  f'<text x="56" y="{y+26}" class="row">{n}</text>'
-                 f'<text x="590" y="{y+26}" class="row" text-anchor="end" fill="{MUTED}">{r}</text>')
+                 f'<text x="590" y="{y+26}" class="row" text-anchor="end" style="fill:{MUTED}">{r}</text>')
     y = 3 * 52 + 14
     rows += (f'<rect x="0" y="{y}" width="600" height="42" rx="6" fill="none" '
              f'stroke="{CLAY}" stroke-width="2.5"/>'
              f'<circle cx="26" cy="{y+21}" r="13" fill="{CLAY}"/>'
              f'<text x="26" y="{y+26}" class="pin">?</text>'
-             f'<text x="56" y="{y+26}" class="row" fill="{CLAY}">{negocio}</text>'
-             f'<text x="590" y="{y+26}" class="row" text-anchor="end" fill="{CLAY}">{pos_txt}</text>')
+             f'<text x="56" y="{y+26}" class="row" style="fill:{CLAY}">{negocio}</text>'
+             f'<text x="590" y="{y+26}" class="row" text-anchor="end" style="fill:{CLAY}">{pos_txt}</text>')
     return f'<svg viewBox="0 0 600 {y+52}" class="fig">{rows}</svg>'
 
 
@@ -358,7 +358,7 @@ def caminos_n(lang='es'):
     y = 26 + 4 * rh + 6
     out += (f'<rect x="0" y="{y}" width="{NW}" height="38" rx="8" fill="{INK}"/>'
             f'<text x="{NW/2}" y="{y+24}" class="stp" text-anchor="middle" '
-            f'fill="#EFF1EC">{mine}</text>')
+            f' style="fill:#EFF1EC">{mine}</text>')
     return f'<svg viewBox="0 0 {NW} {y+44}" class="fig">{out}</svg>'
 
 
@@ -398,13 +398,13 @@ def matriz_n(servicios, ciudades, lang='es'):
             out += (f'<rect x="{x}" y="{y+24}" width="{cw}" height="34" rx="5" '
                     f'fill="rgba(37,211,102,.16)" stroke="{WA}" stroke-width="1.2"/>'
                     f'<text x="{x+cw/2}" y="{y+45}" class="cap" text-anchor="middle" '
-                    f'fill="{INK}">{c[:9]}</text>')
+                    f'style="fill:{INK}">{c[:14]}</text>')
     txt = (f'{len(servicios)} × {len(ciudades)} = {n} '
            + ('pages' if lang == 'en' else 'páginas'))
     y = len(servicios) * rh + 4
     out += (f'<rect x="0" y="{y}" width="{NW}" height="32" rx="6" fill="{INK}"/>'
             f'<text x="{NW/2}" y="{y+22}" class="stp" text-anchor="middle" '
-            f'fill="#EFF1EC">{txt}</text>')
+            f' style="fill:#EFF1EC">{txt}</text>')
     return f'<svg viewBox="0 0 {NW} {y+38}" class="fig">{out}</svg>'
 
 
@@ -432,12 +432,12 @@ def nap_n(lang='es'):
             (hl[0], ok, WA, 'rgba(37,211,102,.10)'),
             (hl[1], bad, CLAY, 'rgba(221,75,52,.08)')]):
         y = k * 132
-        out += (f'<text x="0" y="{y+11}" class="lbl" fill="{col}">{lab}</text>'
+        out += (f'<text x="0" y="{y+11}" class="lbl" style="fill:{col}">{lab}</text>'
                 f'<rect x="0" y="{y+20}" width="{NW}" height="96" rx="8" fill="{fill}" '
                 f'stroke="{col}" stroke-width="1.5"/>')
         for i, v in enumerate(vals):
             out += (f'<text x="14" y="{y+42+i*21}" class="cell" '
-                    f'fill="{INK if k == 0 else CLAY}">{v}</text>')
+                    f' style="fill:{INK if k == 0 else CLAY}">{v}</text>')
     return f'<svg viewBox="0 0 {NW} 264" class="fig">{out}</svg>'
 
 
@@ -464,7 +464,7 @@ def enlaces_n(lang='es'):
             out += f'<text x="16" y="{y+66+i*17}" class="cap" style="font-size:11px">{ln}</text>'
         out += (f'<line x1="16" y1="{y+100}" x2="{NW-16}" y2="{y+100}" stroke="{RULE}" '
                 f'stroke-width="1"/><text x="16" y="{y+115}" class="cap" '
-                f'style="font-size:11px" fill="{fcol}">{foot}</text>')
+                f'style="font-size:11px;fill:{fcol}">{foot}</text>')
     return f'<svg viewBox="0 0 {NW} 264" class="fig">{out}</svg>'
 
 
@@ -512,7 +512,7 @@ def scorecard_n(lang='es'):
                 f'<text x="14" y="{y+21}" class="row">{t}</text>'
                 f'<text x="14" y="{y+39}" class="cap">{prev}: {b}</text>'
                 f'<text x="{NW-38}" y="{y+34}" class="big" text-anchor="end" '
-                f'fill="{WA if up else INK}">{a}</text>'
+                f' style="fill:{WA if up else INK}">{a}</text>'
                 f'<text x="{NW-14}" y="{y+33}" class="row" text-anchor="end" '
-                f'fill="{WA if up else CLAY}">{"↑" if up else "↓"}</text>')
+                f' style="fill:{WA if up else CLAY}">{"↑" if up else "↓"}</text>')
     return f'<svg viewBox="0 0 {NW} {len(rows)*rh}" class="fig">{out}</svg>'
