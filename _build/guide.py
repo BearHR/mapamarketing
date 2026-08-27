@@ -14,31 +14,35 @@ SVC_EN = ['Leak repair', 'Drain cleaning', 'Water heaters']
 CIU = ['Houston', 'Katy', 'Sugar Land']
 
 
-def fig(es_svg, en_svg, pie_es, pie_en):
-    """Una figura por idioma; split.py se queda con la que toca."""
-    return ('<div class="figwrap" data-l="es">%s<p class="figcap">%s</p></div>'
-            '<div class="figwrap" data-l="en">%s<p class="figcap">%s</p></div>'
-            % (es_svg, pie_es, en_svg, pie_en))
+def fig(w_es, n_es, w_en, n_en, pie_es, pie_en):
+    """Dos versiones por idioma: ancha y apilada. El CSS elige según el ancho."""
+    def blk(w, n, pie, lang):
+        return ('<div class="figwrap" data-l="%s">'
+                '<div class="fig--w">%s</div><div class="fig--n">%s</div>'
+                '<p class="figcap">%s</p></div>' % (lang, w, n, pie))
+    return blk(w_es, n_es, pie_es, 'es') + blk(w_en, n_en, pie_en, 'en')
 
 
 def figuras_web():
     return {
-        'c1': fig(V.caminos('es') + V.factores('es'), V.caminos('en') + V.factores('en'),
+        'c1': fig(V.caminos('es') + V.factores('es'), V.caminos_n('es') + V.factores_n('es'),
+                  V.caminos('en') + V.factores('en'), V.caminos_n('en') + V.factores_n('en'),
                   'Los cuatro caminos, y los tres factores que ordenan el mapa',
                   'The four paths, and the three factors that order the map'),
-        'c2': fig(V.matriz(SVC_ES, CIU, 'es'), V.matriz(SVC_EN, CIU, 'en'),
+        'c2': fig(V.matriz(SVC_ES, CIU, 'es'), V.matriz_n(SVC_ES, CIU, 'es'),
+                  V.matriz(SVC_EN, CIU, 'en'), V.matriz_n(SVC_EN, CIU, 'en'),
                   'Servicios por ciudades: de ahí sale tu número de páginas',
                   'Services times cities: that is where your page count comes from'),
-        'c5': fig(V.perfil('es'), V.perfil('en'),
+        'c5': fig(V.perfil('es'), V.perfil_n('es'), V.perfil('en'), V.perfil_n('en'),
                   'Anatomía del Perfil de Negocio de Google',
                   'Anatomy of the Google Business Profile'),
-        'c7': fig(V.nap('es'), V.nap('en'),
+        'c7': fig(V.nap('es'), V.nap_n('es'), V.nap('en'), V.nap_n('en'),
                   'El mismo negocio, escrito bien y escrito mal',
                   'The same business, written right and written wrong'),
-        'c9': fig(V.enlaces('es'), V.enlaces('en'),
+        'c9': fig(V.enlaces('es'), V.enlaces_n('es'), V.enlaces('en'), V.enlaces_n('en'),
                   'Por qué uno bueno le gana a cincuenta comprados',
                   'Why one good link beats fifty bought ones'),
-        'c11': fig(V.scorecard('es'), V.scorecard('en'),
+        'c11': fig(V.scorecard('es'), V.scorecard_n('es'), V.scorecard('en'), V.scorecard_n('en'),
                    'El tablero de una hoja, cada mes',
                    'The one-page dashboard, every month'),
     }

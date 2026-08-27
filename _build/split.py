@@ -10,7 +10,7 @@ canonical y JSON-LD. Ejecutar después de pages.py / toolpages.py / guide.py.
 import json, pathlib, re, shutil
 from bs4 import BeautifulSoup
 
-ROOT = pathlib.Path('/home/claude/mapa')
+ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / '_src'
 EN = ROOT / 'en'
 

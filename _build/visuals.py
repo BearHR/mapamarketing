@@ -327,3 +327,192 @@ def ruta(pasos):
                 f'<text x="{cx}" y="60" class="stp" text-anchor="middle">{t}</text>'
                 f'<text x="{cx}" y="77" class="cap" text-anchor="middle">{sub}</text>')
     return f'<svg viewBox="0 0 600 88" class="fig">{out}</svg>'
+
+
+# ==========================================================================
+# Variantes estrechas: la misma información apilada, para pantallas chicas.
+# No se hace scroll horizontal; cada figura se rearma en una columna.
+# ==========================================================================
+NW = 360
+
+
+def caminos_n(lang='es'):
+    if lang == 'en':
+        items = [('The map', 'The top three'), ('Search', 'The results'),
+                 ('Other maps', 'Apple · Bing · Yelp'), ('AI', 'The assistants')]
+        head, mine = 'HOW A CUSTOMER REACHES YOU', 'YOUR BUSINESS'
+    else:
+        items = [('El mapa', 'Los 3 de arriba'), ('La búsqueda', 'Los resultados'),
+                 ('Otros mapas', 'Apple · Bing · Yelp'), ('La IA', 'Los asistentes')]
+        head, mine = 'POR DÓNDE TE ENCUENTRA UN CLIENTE', 'TU NEGOCIO'
+    out = f'<text x="0" y="13" class="lbl">{head}</text>'
+    rh = 52
+    for i, (t, s_) in enumerate(items):
+        y = 26 + i * rh
+        out += (f'<rect x="0" y="{y}" width="{NW}" height="44" rx="8" fill="{PAPER}" '
+                f'stroke="{RULE}" stroke-width="1.5"/>'
+                f'<circle cx="26" cy="{y+22}" r="13" fill="{SUN if i==0 else INK}"/>'
+                f'<text x="26" y="{y+27}" class="pin">{i+1}</text>'
+                f'<text x="52" y="{y+19}" class="stp">{t}</text>'
+                f'<text x="52" y="{y+35}" class="cap">{s_}</text>')
+    y = 26 + 4 * rh + 6
+    out += (f'<rect x="0" y="{y}" width="{NW}" height="38" rx="8" fill="{INK}"/>'
+            f'<text x="{NW/2}" y="{y+24}" class="stp" text-anchor="middle" '
+            f'fill="#EFF1EC">{mine}</text>')
+    return f'<svg viewBox="0 0 {NW} {y+44}" class="fig">{out}</svg>'
+
+
+def factores_n(lang='es'):
+    if lang == 'en':
+        rows = [('Relevance', 'How well you match the search', 100),
+                ('Distance', 'How close you are', 35),
+                ('Prominence', 'How known you are', 100)]
+        head = 'THE THREE FACTORS · HOW MUCH YOU CONTROL'
+    else:
+        rows = [('Relevancia', 'Qué tanto coincides con la búsqueda', 100),
+                ('Distancia', 'Qué tan cerca estás', 35),
+                ('Prominencia', 'Qué tan conocido eres', 100)]
+        head = 'LOS TRES FACTORES · CUÁNTO CONTROLAS'
+    out = f'<text x="0" y="13" class="lbl">{head}</text>'
+    rh = 74
+    for i, (t, s_, pct) in enumerate(rows):
+        y = 30 + i * rh
+        out += (f'<text x="0" y="{y+14}" class="stp">{t}</text>'
+                f'<text x="0" y="{y+31}" class="cap">{s_}</text>'
+                f'<rect x="0" y="{y+40}" width="{NW}" height="20" rx="5" fill="{PAPER}"/>'
+                f'<rect x="0" y="{y+40}" width="{NW*pct/100}" height="20" rx="5" '
+                f'fill="{WA if pct > 50 else GREYB}"/>')
+    return f'<svg viewBox="0 0 {NW} {30+3*rh}" class="fig">{out}</svg>'
+
+
+def matriz_n(servicios, ciudades, lang='es'):
+    servicios, ciudades = servicios[:4], ciudades[:4]
+    n = len(servicios) * len(ciudades)
+    cw = (NW - 8 * (len(ciudades) - 1)) / len(ciudades)
+    out, rh = '', 74
+    for i, sv in enumerate(servicios):
+        y = i * rh
+        out += f'<text x="0" y="{y+14}" class="stp">{sv[:26]}</text>'
+        for j, c in enumerate(ciudades):
+            x = j * (cw + 8)
+            out += (f'<rect x="{x}" y="{y+24}" width="{cw}" height="34" rx="5" '
+                    f'fill="rgba(37,211,102,.16)" stroke="{WA}" stroke-width="1.2"/>'
+                    f'<text x="{x+cw/2}" y="{y+45}" class="cap" text-anchor="middle" '
+                    f'fill="{INK}">{c[:9]}</text>')
+    txt = (f'{len(servicios)} × {len(ciudades)} = {n} '
+           + ('pages' if lang == 'en' else 'páginas'))
+    y = len(servicios) * rh + 4
+    out += (f'<rect x="0" y="{y}" width="{NW}" height="32" rx="6" fill="{INK}"/>'
+            f'<text x="{NW/2}" y="{y+22}" class="stp" text-anchor="middle" '
+            f'fill="#EFF1EC">{txt}</text>')
+    return f'<svg viewBox="0 0 {NW} {y+38}" class="fig">{out}</svg>'
+
+
+def ruta_n(pasos):
+    out, rh = '', 54
+    for i, (t, sub) in enumerate(pasos):
+        y = i * rh
+        if i < len(pasos) - 1:
+            out += (f'<line x1="20" y1="{y+34}" x2="20" y2="{y+rh+6}" '
+                    f'stroke="{RULE}" stroke-width="3"/>')
+        out += (f'<circle cx="20" cy="{y+20}" r="13" fill="{SUN if i==0 else INK}"/>'
+                f'<text x="20" y="{y+25}" class="pin">{i+1}</text>'
+                f'<text x="46" y="{y+17}" class="stp">{t}</text>'
+                f'<text x="46" y="{y+33}" class="cap">{sub}</text>')
+    return f'<svg viewBox="0 0 {NW} {len(pasos)*rh}" class="fig">{out}</svg>'
+
+
+def nap_n(lang='es'):
+    ok = ['Ramirez Plumbing LLC', '1420 Bellaire Boulevard', 'Houston, TX 77081', '(713) 555-0142']
+    bad = ['Ramirez Plumbing', '1420 Bellaire Blvd.', 'Houston TX 77081', '713-555-0142']
+    hl = ('CORRECT · THE SAME EVERYWHERE', 'INCONSISTENT · GOOGLE HESITATES') if lang == 'en' \
+        else ('BIEN · IGUAL EN TODOS LADOS', 'MAL · GOOGLE DUDA')
+    out = ''
+    for k, (lab, vals, col, fill) in enumerate([
+            (hl[0], ok, WA, 'rgba(37,211,102,.10)'),
+            (hl[1], bad, CLAY, 'rgba(221,75,52,.08)')]):
+        y = k * 132
+        out += (f'<text x="0" y="{y+11}" class="lbl" fill="{col}">{lab}</text>'
+                f'<rect x="0" y="{y+20}" width="{NW}" height="96" rx="8" fill="{fill}" '
+                f'stroke="{col}" stroke-width="1.5"/>')
+        for i, v in enumerate(vals):
+            out += (f'<text x="14" y="{y+42+i*21}" class="cell" '
+                    f'fill="{INK if k == 0 else CLAY}">{v}</text>')
+    return f'<svg viewBox="0 0 {NW} 264" class="fig">{out}</svg>'
+
+
+def enlaces_n(lang='es'):
+    if lang == 'en':
+        blocks = [('1', 'One local link', ['Chamber of commerce,', 'supplier, sponsorship'],
+                   'Works, and keeps working', WA, 'rgba(37,211,102,.10)', WA),
+                  ('50', 'Fifty bought links', ['Sites that exist only', 'to sell links'],
+                   'No help now, penalties later', '#9AA69E', PAPER, CLAY)]
+    else:
+        blocks = [('1', 'Un enlace local', ['Cámara de comercio,', 'proveedor, patrocinio'],
+                   'Sirve hoy y sigue sirviendo', WA, 'rgba(37,211,102,.10)', WA),
+                  ('50', 'Cincuenta comprados', ['Sitios que solo existen', 'para vender enlaces'],
+                   'Hoy no sirven, mañana penalizan', '#9AA69E', PAPER, CLAY)]
+    out = ''
+    for k, (num, t, lines, foot, ncol, fill, fcol) in enumerate(blocks):
+        y = k * 140
+        out += (f'<rect x="0" y="{y}" width="{NW}" height="124" rx="8" fill="{fill}" '
+                f'stroke="{ncol if k == 0 else RULE}" stroke-width="1.5"/>'
+                f'<circle cx="30" cy="{y+32}" r="16" fill="{ncol}"/>'
+                f'<text x="30" y="{y+38}" class="pin" style="font-size:14px">{num}</text>'
+                f'<text x="56" y="{y+38}" class="stp">{t}</text>')
+        for i, ln in enumerate(lines):
+            out += f'<text x="16" y="{y+66+i*17}" class="cap" style="font-size:11px">{ln}</text>'
+        out += (f'<line x1="16" y1="{y+100}" x2="{NW-16}" y2="{y+100}" stroke="{RULE}" '
+                f'stroke-width="1"/><text x="16" y="{y+115}" class="cap" '
+                f'style="font-size:11px" fill="{fcol}">{foot}</text>')
+    return f'<svg viewBox="0 0 {NW} 264" class="fig">{out}</svg>'
+
+
+def perfil_n(lang='es'):
+    if lang == 'en':
+        parts = [('Primary category', 'Weighs most of all'),
+                 ('Services list', 'Almost nobody fills it in'),
+                 ('Photos', 'New ones every month'),
+                 ('Posts', 'Keeps the profile alive'),
+                 ('Reviews & replies', 'Moves the map and the decision')]
+        head = 'WHAT DECIDES YOUR RANKING'
+    else:
+        parts = [('Categoría principal', 'Lo que más pesa de todo'),
+                 ('Lista de servicios', 'Casi nadie la llena'),
+                 ('Fotos', 'Nuevas cada mes'),
+                 ('Publicaciones', 'Mantienen vivo el perfil'),
+                 ('Reseñas y respuestas', 'Mueven el mapa y la decisión')]
+        head = 'LO QUE DECIDE TU POSICIÓN'
+    out = f'<text x="0" y="13" class="lbl">{head}</text>'
+    for i, (t, s_) in enumerate(parts):
+        y = 26 + i * 48
+        out += (f'<rect x="0" y="{y}" width="{NW}" height="40" rx="7" fill="{PAPER}" '
+                f'stroke="{RULE}" stroke-width="1.2"/>'
+                f'<rect x="0" y="{y}" width="6" height="40" rx="3" '
+                f'fill="{SUN if i == 0 else INK}"/>'
+                f'<text x="18" y="{y+18}" class="stp">{t}</text>'
+                f'<text x="18" y="{y+33}" class="cap">{s_}</text>')
+    return f'<svg viewBox="0 0 {NW} {26+5*48}" class="fig">{out}</svg>'
+
+
+def scorecard_n(lang='es'):
+    if lang == 'en':
+        rows = [('Calls from the site', '14', '9'), ('Calls from Google', '31', '22'),
+                ('New reviews', '4', '2'), ('Jobs closed', '12', '10')]
+        prev = 'last month'
+    else:
+        rows = [('Llamadas desde el sitio', '14', '9'), ('Llamadas desde Google', '31', '22'),
+                ('Reseñas nuevas', '4', '2'), ('Trabajos cerrados', '12', '10')]
+        prev = 'mes pasado'
+    out, rh = '', 58
+    for i, (t, a, b) in enumerate(rows):
+        y = i * rh
+        up = int(a) > int(b)
+        out += (f'<rect x="0" y="{y}" width="{NW}" height="50" rx="6" fill="{PAPER}"/>'
+                f'<text x="14" y="{y+21}" class="row">{t}</text>'
+                f'<text x="14" y="{y+39}" class="cap">{prev}: {b}</text>'
+                f'<text x="{NW-38}" y="{y+34}" class="big" text-anchor="end" '
+                f'fill="{WA if up else INK}">{a}</text>'
+                f'<text x="{NW-14}" y="{y+33}" class="row" text-anchor="end" '
+                f'fill="{WA if up else CLAY}">{"↑" if up else "↓"}</text>')
+    return f'<svg viewBox="0 0 {NW} {len(rows)*rh}" class="fig">{out}</svg>'

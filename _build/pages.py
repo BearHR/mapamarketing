@@ -6,11 +6,19 @@ import visuals as V
 
 V.PAPER = '#E4E8E0'
 
+RUTA_ES = [('Nos escribes', 'Hoy'), ('Diagnóstico', 'Día 1–3'), ('El mapa', 'Semana 1'),
+           ('El sitio', 'Semanas 2–4'), ('Los 4 mapas', 'Semana 4'), ('El ritmo', 'Cada mes')]
+RUTA_EN = [('You message', 'Today'), ('Diagnosis', 'Day 1–3'), ('The map', 'Week 1'),
+           ('The site', 'Weeks 2–4'), ('The 4 maps', 'Week 4'), ('The rhythm', 'Monthly')]
 
-def figpair(es_svg, en_svg, pie_es, pie_en):
-    return ('<div class="figwrap reveal" data-l="es">%s<p class="figcap">%s</p></div>'
-            '<div class="figwrap reveal" data-l="en">%s<p class="figcap">%s</p></div>'
-            % (es_svg, pie_es, en_svg, pie_en))
+
+def figpair(w_es, n_es, w_en, n_en, pie_es, pie_en):
+    def blk(w, n, pie, lang):
+        return ('<div class="figwrap reveal" data-l="%s">'
+                '<div class="fig--w">%s</div><div class="fig--n">%s</div>'
+                '<p class="figcap">%s</p></div>' % (lang, w, n, pie))
+    return blk(w_es, n_es, pie_es, 'es') + blk(w_en, n_en, pie_en, 'en')
+
 
 def phero(legend_es, legend_en, h1_es, h1_en, sub_es, sub_en):
     return f'''<section class="deep grid-bg sec sec--tight">
@@ -69,7 +77,9 @@ servicios = phero(
     <div class="route">
 ''' + figpair(
       V.matriz(['Reparación de fugas','Destape de drenajes','Calentadores'], ['Houston','Katy','Sugar Land'], 'es'),
+      V.matriz_n(['Reparación de fugas','Destape de drenajes','Calentadores'], ['Houston','Katy','Sugar Land'], 'es'),
       V.matriz(['Leak repair','Drain cleaning','Water heaters'], ['Houston','Katy','Sugar Land'], 'en'),
+      V.matriz_n(['Leak repair','Drain cleaning','Water heaters'], ['Houston','Katy','Sugar Land'], 'en'),
       'Servicios por ciudades: de ahí sale tu número de páginas',
       'Services times cities: that is where your page count comes from') + block("01", "Arquitectura antes que diseño", "Architecture before design",
   "Antes de escoger un color decidimos qué páginas van a existir. Y no son una de servicios y otra de ciudades: es una página para cada servicio en cada ciudad. Destape de drenajes en Katy. Destape de drenajes en Sugar Land. Calentadores en Katy. Más las de apoyo: sobre el negocio, reseñas y contacto.",
@@ -229,10 +239,7 @@ proceso = phero(
 <section class="sec">
   <div class="wrap">
     ''' + figpair(
-      V.ruta([('Nos escribes','Hoy'), ('Diagnóstico','Día 1–3'), ('El mapa','Semana 1'),
-              ('El sitio','Semanas 2–4'), ('Los 4 mapas','Semana 4'), ('El ritmo','Cada mes')]),
-      V.ruta([('You message','Today'), ('Diagnosis','Day 1–3'), ('The map','Week 1'),
-              ('The site','Weeks 2–4'), ('The 4 maps','Week 4'), ('The rhythm','Monthly')]),
+      V.ruta(RUTA_ES), V.ruta_n(RUTA_ES), V.ruta(RUTA_EN), V.ruta_n(RUTA_EN),
       'Del primer mensaje al ritmo mensual', 'From first message to monthly rhythm') + '''
     <div class="route">
       <div class="route__stop reveal">
@@ -299,21 +306,21 @@ proceso = phero(
     <div class="sechead reveal">
       <p class="legend"><span data-l="es">El calendario</span><span data-l="en">The calendar</span></p>
       <h2><span data-l="es">Cómo se ve un mes cualquiera</span><span data-l="en">What a normal month looks like</span></h2>
+      <p class="lede"><span data-l="es">Nada de esto es relleno. Cada cosa que se hace en el mes existe para lo mismo: que más gente de tu zona te encuentre y te llame.</span><span data-l="en">None of this is filler. Everything done in the month exists for one reason: more people in your area finding you and calling you.</span></p>
     </div>
     <div class="tiles tiles--4">
       <div class="tile reveal"><span class="tile__n"><span data-l="es">SEMANA 1</span><span data-l="en">WEEK 1</span></span>
-        <h2><span data-l="es">Revisión y plan</span><span data-l="en">Review and plan</span></h2>
-        <p><span data-l="es">Leemos los mapas de calor y los datos del mes anterior. Definimos los temas del mes y qué se va a ajustar en el sitio.</span><span data-l="en">We read last month's heatmaps and data. We pick the month's topics and what gets adjusted on the site.</span></p></div>
+        <h3><span data-l="es">Leer los datos</span><span data-l="en">Read the data</span></h3>
+        <p><span data-l="es">Revisamos los mapas de calor y lo que pasó el mes anterior: qué páginas de servicio y ciudad están convirtiendo, cuáles no, y de dónde vinieron las llamadas. De ahí salen los temas del mes y la lista de ajustes.</span><span data-l="en">We go through the heatmaps and last month's numbers: which service-and-city pages are converting, which aren't, and where the calls came from. That sets the month's topics and the list of fixes.</span></p></div>
       <div class="tile reveal"><span class="tile__n"><span data-l="es">SEMANA 2</span><span data-l="en">WEEK 2</span></span>
-        <h2><span data-l="es">Contenido</span><span data-l="en">Content</span></h2>
-        <p><span data-l="es">Se escriben y publican los artículos del mes. Empiezan a salir las publicaciones de Google con foto.</span><span data-l="en">The month's articles get written and published. Google posts start going out with photos.</span></p></div>
+        <h3><span data-l="es">Contenido</span><span data-l="en">Content</span></h3>
+        <p><span data-l="es">Se escriben y publican los artículos del mes y salen las publicaciones del Perfil de Negocio de Google, cada una con su foto y su llamada a la acción.</span><span data-l="en">The month's articles get written and published, and the Google Business Profile posts go out, each with a photo and a call to action.</span></p></div>
       <div class="tile reveal"><span class="tile__n"><span data-l="es">SEMANA 3</span><span data-l="en">WEEK 3</span></span>
-        <h2><span data-l="es">Mapas y fotos</span><span data-l="en">Maps and photos</span></h2>
-        <p><span data-l="es">Suben las fotos del mes a Google, Apple Maps y Yelp. Se revisan categorías, horarios y servicios en los cuatro perfiles.</span><span data-l="en">The month's photos go up on Google, Apple Maps and Yelp. Categories, hours and services get reviewed on all four profiles.</span></p></div>
+        <h3><span data-l="es">Perfiles y fotos</span><span data-l="en">Profiles and photos</span></h3>
+        <p><span data-l="es">Suben las fotos nuevas a Google y a los demás perfiles. Se revisan categorías, servicios y horarios, y se ajusta el enlazado interno del sitio.</span><span data-l="en">New photos go up on Google and the other profiles. Categories, services and hours get checked, and the site's internal linking gets adjusted.</span></p></div>
       <div class="tile reveal"><span class="tile__n"><span data-l="es">SEMANA 4</span><span data-l="en">WEEK 4</span></span>
-        <h2><span data-l="es">Autoridad y reporte</span><span data-l="en">Authority and report</span></h2>
-        <p><span data-l="es">Se cierran los enlaces que estuvieran en marcha, se revisan las citaciones, salen las últimas publicaciones y te llega el reporte.</span><span data-l="en">Any links in progress get closed, citations get checked, the last posts go out, and your report arrives.</span></p></div>
-    </div>
+        <h3><span data-l="es">Ajustes y reporte</span><span data-l="en">Fixes and report</span></h3>
+        <p><span data-l="es">Si algo no va como queremos, se cambia: el contenido de una página de ciudad, la configuración de servicios en Google, lo que haga falta. Si tu zona pide un enlace, se consigue. Y te llega el reporte.</span><span data-l="en">If something isn't going the way we want, it changes: the copy on a city page, the service setup on Google, whatever it takes. If your area calls for a link, we go get one. And your report arrives.</span></p></div>
   </div>
 </section>
 
